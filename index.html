@@ -14,55 +14,40 @@
 	</head>
 	<body>
 		<header class="header">
-			<nav class="navbar" role="navigation" aria-label="Main navigation">
+			<nav class="navbar">
 				<div class="nav-container">
-					<input
-						type="checkbox"
-						id="nav-toggle"
-						class="nav-toggle-checkbox"
-						aria-hidden="true" />
+					<input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" />
 					<div class="logo-container">
 						<img
 							src="images/logo-bookmark.svg"
-							alt="Bookmark logo"
+							alt="Bookmark"
 							class="logo logo-default" />
 						<img
 							src="images/logo-mobile-active.svg"
-							alt="Bookmark logo"
+							alt="Bookmark"
 							class="logo logo-mobile-active" />
 					</div>
 					<label
 						for="nav-toggle"
 						class="nav-toggle"
-						aria-label="Toggle navigation menu"
-						role="button"
-						tabindex="0">
+						aria-label="Toggle navigation">
 						<img
 							src="images/icon-hamburger.svg"
-							alt=""
-							class="hamburger-icon"
-							aria-hidden="true" />
-						<img
-							src="images/icon-close.svg"
-							alt=""
-							class="close-icon"
-							aria-hidden="true" />
+							alt="Menu"
+							class="hamburger-icon" />
+						<img src="images/icon-close.svg" alt="Close" class="close-icon" />
 					</label>
-					<ul class="nav-menu" role="menu">
-						<li role="none">
-							<a href="#features" role="menuitem">Features</a>
-						</li>
-						<li role="none"><a href="#pricing" role="menuitem">Pricing</a></li>
-						<li role="none"><a href="#contact" role="menuitem">Contact</a></li>
-						<li role="none">
-							<a href="#" class="btn-login" role="menuitem">Login</a>
-						</li>
-						<li class="nav-social" role="none">
-							<a href="#" aria-label="Visit our Facebook page">
-								<img src="images/icon-facebook.svg" alt="" aria-hidden="true" />
+					<ul class="nav-menu">
+						<li><a href="#features">Features</a></li>
+						<li><a href="#pricing">Pricing</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="#" class="btn-login">Login</a></li>
+						<li class="nav-social">
+							<a href="#" aria-label="Facebook">
+								<img src="images/icon-facebook.svg" alt="Facebook" />
 							</a>
-							<a href="#" aria-label="Visit our Twitter page">
-								<img src="images/icon-twitter.svg" alt="" aria-hidden="true" />
+							<a href="#" aria-label="Twitter">
+								<img src="images/icon-twitter.svg" alt="Twitter" />
 							</a>
 						</li>
 					</ul>
@@ -70,46 +55,35 @@
 			</nav>
 		</header>
 
-		<main role="main">
-			<section class="hero" aria-labelledby="hero-heading">
+		<main>
+			<section class="hero">
 				<div class="container">
 					<div class="hero-content">
 						<div class="hero-text">
-							<h1 id="hero-heading">A Simple Bookmark Manager</h1>
+							<h1>A Simple Bookmark Manager</h1>
 							<p>
 								A clean and simple interface to organize your favorite websites.
 								Open a new browser tab and see your sites load instantly. Try it
 								for free.
 							</p>
 							<div class="hero-buttons">
-								<button
-									class="btn btn-chrome"
-									aria-label="Download extension for Chrome browser">
-									Get it on Chrome
-								</button>
-								<button
-									class="btn btn-firefox"
-									aria-label="Download extension for Firefox browser">
-									Get it on Firefox
-								</button>
+								<button class="btn btn-chrome">Get it on Chrome</button>
+								<button class="btn btn-firefox">Get it on Firefox</button>
 							</div>
 						</div>
 						<div class="hero-image">
 							<img
 								src="images/illustration-hero.svg"
-								alt="Illustration showing the Bookmark Manager interface with organized bookmarks and browser tabs" />
+								alt="Bookmark Manager Interface" />
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section
-				class="features"
-				id="features"
-				aria-labelledby="features-heading">
+			<section class="features" id="features">
 				<div class="container">
 					<div class="features-header">
-						<h2 id="features-heading">Features</h2>
+						<h2>Features</h2>
 						<p>
 							Our aim is to make it quick and easy for you to access your
 							favorite websites. Your bookmarks sync between your devices so you
@@ -117,68 +91,37 @@
 						</p>
 					</div>
 
-					<div class="tabs" role="tablist" aria-label="Feature options">
+					<div class="tabs">
 						<input
 							type="radio"
 							name="feature-tab"
 							id="tab1"
 							class="tab-input"
-							checked
-							aria-hidden="true" />
+							checked />
 						<input
 							type="radio"
 							name="feature-tab"
 							id="tab2"
-							class="tab-input"
-							aria-hidden="true" />
+							class="tab-input" />
 						<input
 							type="radio"
 							name="feature-tab"
 							id="tab3"
-							class="tab-input"
-							aria-hidden="true" />
+							class="tab-input" />
 
 						<div class="tab-buttons">
-							<label
-								for="tab1"
-								class="tab-btn"
-								role="tab"
-								aria-selected="true"
-								aria-controls="content1"
-								tabindex="0"
-								>Simple Bookmarking</label
-							>
-							<label
-								for="tab2"
-								class="tab-btn"
-								role="tab"
-								aria-selected="false"
-								aria-controls="content2"
-								tabindex="0"
-								>Speedy Searching</label
-							>
-							<label
-								for="tab3"
-								class="tab-btn"
-								role="tab"
-								aria-selected="false"
-								aria-controls="content3"
-								tabindex="0"
-								>Easy Sharing</label
-							>
+							<label for="tab1" class="tab-btn">Simple Bookmarking</label>
+							<label for="tab2" class="tab-btn">Speedy Searching</label>
+							<label for="tab3" class="tab-btn">Easy Sharing</label>
 						</div>
 
 						<div class="tab-content">
-							<div
-								class="tab-pane"
-								id="content1"
-								role="tabpanel"
-								aria-labelledby="tab1">
+							<div class="tab-pane" id="content1">
 								<div class="feature-content">
 									<div class="feature-image">
 										<img
 											src="images/illustration-features-tab-1.svg"
-											alt="Illustration demonstrating the simple bookmarking feature with drag and drop interface" />
+											alt="Simple Bookmarking" />
 									</div>
 									<div class="feature-text">
 										<h3>Bookmark in one click</h3>
@@ -187,25 +130,17 @@
 											drag-and-drop interface gives you complete control over
 											how you manage your favorite sites.
 										</p>
-										<button
-											class="btn btn-primary"
-											aria-label="Learn more about simple bookmarking feature">
-											More Info
-										</button>
+										<button class="btn btn-primary">More Info</button>
 									</div>
 								</div>
 							</div>
 
-							<div
-								class="tab-pane"
-								id="content2"
-								role="tabpanel"
-								aria-labelledby="tab2">
+							<div class="tab-pane" id="content2">
 								<div class="feature-content">
 									<div class="feature-image">
 										<img
 											src="images/illustration-features-tab-2.svg"
-											alt="Illustration showing the intelligent search feature for finding bookmarks quickly" />
+											alt="Speedy Searching" />
 									</div>
 									<div class="feature-text">
 										<h3>Intelligent search</h3>
@@ -214,25 +149,17 @@
 											in no time at all. No need to trawl through all of your
 											bookmarks.
 										</p>
-										<button
-											class="btn btn-primary"
-											aria-label="Learn more about intelligent search feature">
-											More Info
-										</button>
+										<button class="btn btn-primary">More Info</button>
 									</div>
 								</div>
 							</div>
 
-							<div
-								class="tab-pane"
-								id="content3"
-								role="tabpanel"
-								aria-labelledby="tab3">
+							<div class="tab-pane" id="content3">
 								<div class="feature-content">
 									<div class="feature-image">
 										<img
 											src="images/illustration-features-tab-3.svg"
-											alt="Illustration demonstrating how to share bookmark collections with others" />
+											alt="Easy Sharing" />
 									</div>
 									<div class="feature-text">
 										<h3>Share your bookmarks</h3>
@@ -241,11 +168,7 @@
 											Create a shareable link that you can send at the click of
 											a button.
 										</p>
-										<button
-											class="btn btn-primary"
-											aria-label="Learn more about bookmark sharing feature">
-											More Info
-										</button>
+										<button class="btn btn-primary">More Info</button>
 									</div>
 								</div>
 							</div>
@@ -254,10 +177,10 @@
 				</div>
 			</section>
 
-			<section class="download" aria-labelledby="download-heading">
+			<section class="download">
 				<div class="container">
 					<div class="download-header">
-						<h2 id="download-heading">Download the extension</h2>
+						<h2>Download the extension</h2>
 						<p>
 							We've got more browsers in the pipeline. Please do let us know if
 							you've got a favorite you'd like us to prioritize.
@@ -265,80 +188,48 @@
 					</div>
 
 					<div class="browser-cards">
-						<article class="browser-card" aria-labelledby="chrome-heading">
-							<img
-								src="images/logo-chrome.svg"
-								alt="Google Chrome browser logo" />
-							<h3 id="chrome-heading">Add to Chrome</h3>
+						<article class="browser-card">
+							<img src="images/logo-chrome.svg" alt="Chrome" />
+							<h3>Add to Chrome</h3>
 							<p>Minimum version 62</p>
-							<img
-								src="images/bg-dots.svg"
-								alt=""
-								class="dots"
-								aria-hidden="true" />
-							<button
-								class="btn btn-primary"
-								aria-label="Add and install Bookmark extension for Chrome">
-								Add & Install Extension
-							</button>
+							<img src="images/bg-dots.svg" alt="" class="dots" />
+							<button class="btn btn-primary">Add & Install Extension</button>
 						</article>
 
-						<article class="browser-card" aria-labelledby="firefox-heading">
-							<img
-								src="images/logo-firefox.svg"
-								alt="Mozilla Firefox browser logo" />
-							<h3 id="firefox-heading">Add to Firefox</h3>
+						<article class="browser-card">
+							<img src="images/logo-firefox.svg" alt="Firefox" />
+							<h3>Add to Firefox</h3>
 							<p>Minimum version 55</p>
-							<img
-								src="images/bg-dots.svg"
-								alt=""
-								class="dots"
-								aria-hidden="true" />
-							<button
-								class="btn btn-primary"
-								aria-label="Add and install Bookmark extension for Firefox">
-								Add & Install Extension
-							</button>
+							<img src="images/bg-dots.svg" alt="" class="dots" />
+							<button class="btn btn-primary">Add & Install Extension</button>
 						</article>
 
-						<article class="browser-card" aria-labelledby="opera-heading">
-							<img src="images/logo-opera.svg" alt="Opera browser logo" />
-							<h3 id="opera-heading">Add to Opera</h3>
+						<article class="browser-card">
+							<img src="images/logo-opera.svg" alt="Opera" />
+							<h3>Add to Opera</h3>
 							<p>Minimum version 46</p>
-							<img
-								src="images/bg-dots.svg"
-								alt=""
-								class="dots"
-								aria-hidden="true" />
-							<button
-								class="btn btn-primary"
-								aria-label="Add and install Bookmark extension for Opera">
-								Add & Install Extension
-							</button>
+							<img src="images/bg-dots.svg" alt="" class="dots" />
+							<button class="btn btn-primary">Add & Install Extension</button>
 						</article>
 					</div>
 				</div>
 			</section>
 
-			<section class="faq" aria-labelledby="faq-heading">
+			<section class="faq">
 				<div class="container">
 					<div class="faq-header">
-						<h2 id="faq-heading">Frequently Asked Questions</h2>
+						<h2>Frequently Asked Questions</h2>
 						<p>
 							Here are some of our FAQs. If you have any other questions you'd
 							like answered please feel free to email us.
 						</p>
 					</div>
 
-					<div class="faq-list" role="list">
-						<details class="faq-item" role="listitem">
-							<summary aria-label="What is Bookmark? Click to expand answer">
+					<div class="faq-list">
+						<details class="faq-item">
+							<summary>
 								What is Bookmark?
-								<img
-									src="images/icon-arrow.svg"
-									alt=""
-									class="arrow"
-									aria-hidden="true" />
+								<img src="images/icon-arrow.svg" alt="" class="arrow" />
 							</summary>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
@@ -347,15 +238,10 @@
 							</p>
 						</details>
 
-						<details class="faq-item" role="listitem">
-							<summary
-								aria-label="How can I request a new browser? Click to expand answer">
+						<details class="faq-item">
+							<summary>
 								How can I request a new browser?
-								<img
-									src="images/icon-arrow.svg"
-									alt=""
-									class="arrow"
-									aria-hidden="true" />
+								<img src="images/icon-arrow.svg" alt="" class="arrow" />
 							</summary>
 							<p>
 								Vivamus luctus eros aliquet convallis ultricies. Mauris augue
@@ -363,15 +249,10 @@
 							</p>
 						</details>
 
-						<details class="faq-item" role="listitem">
-							<summary
-								aria-label="Is there a mobile app? Click to expand answer">
+						<details class="faq-item">
+							<summary>
 								Is there a mobile app?
-								<img
-									src="images/icon-arrow.svg"
-									alt=""
-									class="arrow"
-									aria-hidden="true" />
+								<img src="images/icon-arrow.svg" alt="" class="arrow" />
 							</summary>
 							<p>
 								Sed consectetur quam id neque fermentum accumsan. Praesent
@@ -379,15 +260,10 @@
 							</p>
 						</details>
 
-						<details class="faq-item" role="listitem">
-							<summary
-								aria-label="What about other Chromium browsers? Click to expand answer">
+						<details class="faq-item">
+							<summary>
 								What about other Chromium browsers?
-								<img
-									src="images/icon-arrow.svg"
-									alt=""
-									class="arrow"
-									aria-hidden="true" />
+								<img src="images/icon-arrow.svg" alt="" class="arrow" />
 							</summary>
 							<p>
 								Integer condimentum ipsum id imperdiet finibus. Vivamus in
@@ -397,79 +273,48 @@
 						</details>
 					</div>
 
-					<button
-						class="btn btn-primary"
-						aria-label="Get more information about Bookmark">
-						More Info
-					</button>
+					<button class="btn btn-primary">More Info</button>
 				</div>
 			</section>
 
-			<section
-				class="newsletter"
-				id="contact"
-				aria-labelledby="newsletter-heading">
+			<section class="newsletter" id="contact">
 				<div class="container">
 					<p class="newsletter-label">35,000+ already joined</p>
-					<h2 id="newsletter-heading">Stay up-to-date with what we're doing</h2>
+					<h2>Stay up-to-date with what we're doing</h2>
 
-					<form
-						class="newsletter-form"
-						novalidate
-						aria-label="Newsletter subscription form">
+					<form class="newsletter-form">
 						<div class="form-group">
-							<label for="email-input" class="visually-hidden"
-								>Email address</label
-							>
 							<input
 								type="email"
-								id="email-input"
 								placeholder="Enter your email address"
-								required
-								aria-required="true"
-								aria-describedby="email-error"
-								aria-invalid="false" />
-							<img
-								src="images/icon-error.svg"
-								alt=""
-								class="error-icon"
-								aria-hidden="true" />
-							<span class="error-message" id="email-error" role="alert"
-								>Whoops, make sure it's an email</span
-							>
+								required />
+							<img src="images/icon-error.svg" alt="" class="error-icon" />
+							<span class="error-message">Whoops, make sure it's an email</span>
 						</div>
-						<button
-							type="submit"
-							class="btn btn-secondary"
-							aria-label="Submit email to contact us">
-							Contact Us
-						</button>
+						<button type="submit" class="btn btn-secondary">Contact Us</button>
 					</form>
 				</div>
 			</section>
 		</main>
 
-		<footer class="footer" role="contentinfo">
+		<footer class="footer">
 			<div class="container">
 				<div class="footer-content">
 					<img
 						src="images/logo-bookmark-footer.svg"
-						alt="Bookmark logo"
+						alt="Bookmark"
 						class="footer-logo" />
-					<nav
-						class="footer-nav"
-						role="navigation"
-						aria-label="Footer navigation">
+					<nav class="footer-nav">
 						<a href="#features">Features</a>
 						<a href="#pricing">Pricing</a>
 						<a href="#contact">Contact</a>
 					</nav>
-					<div class="social-links" role="list" aria-label="Social media links">
-						<a href="#" aria-label="Visit our Facebook page" role="listitem">
-							<img src="images/icon-facebook.svg" alt="" aria-hidden="true" />
+					<div class="social-links">
+						<a href="#" aria-label="Facebook">
+							<img src="images/icon-facebook.svg" alt="Facebook" />
 						</a>
-						<a href="#" aria-label="Visit our Twitter page" role="listitem">
-							<img src="images/icon-twitter.svg" alt="" aria-hidden="true" />
+						<a href="#" aria-label="Twitter">
+							<img src="images/icon-twitter.svg" alt="Twitter" />
 						</a>
 					</div>
 				</div>
