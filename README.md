@@ -1,86 +1,50 @@
-# Bookmark Landing Page
+# Bookmark Manager Landing Page
 
-Landing page responsive y accesible para Bookmark Manager creada con HTML y CSS vanilla.
+A responsive and accessible landing page for a bookmark management browser extension. Built with semantic HTML5, CSS3, and enhanced accessibility features following WCAG guidelines.
 
-## Características
+## Features
 
-- Diseño mobile-first totalmente responsive
-- Navegación interactiva sin JavaScript
-- Tabs funcionales usando radio buttons y CSS puro
-- Menú hamburguesa para móviles
-- Sección de FAQ con acordeones nativos HTML
-- Formulario de newsletter con validación
-- **Accesibilidad WCAG 2.1 nivel AA**
-- **Atributos ARIA implementados**
-- **Optimizado para lectores de pantalla**
-- **Navegación completa por teclado**
+- Fully responsive design for mobile, tablet, and desktop
+- CSS-only mobile navigation with hamburger menu
+- Interactive tab system without JavaScript
+- Native HTML5 accordion FAQ section
+- Form validation with ARIA live regions
+- WCAG AA compliant color contrast
+- Comprehensive ARIA attributes for screen readers
+- Keyboard navigation support
 
-## Accesibilidad
+## Technologies
 
-Este proyecto cumple con los estándares de accesibilidad web modernos:
+- HTML5 (Semantic markup)
+- CSS3 (Custom properties, Flexbox, Grid)
+- Montserrat font family
 
-### Atributos ARIA
+## Structure
 
-- `role` y `aria-label` en navegación y componentes interactivos
-- `aria-selected`, `aria-controls` en sistema de tabs
-- `aria-invalid`, `aria-required`, `aria-describedby` en formularios
-- `aria-hidden` en elementos decorativos
-
-### Semántica y Estructura
-
-- HTML5 semántico con roles de landmark
-- Textos alternativos descriptivos en todas las imágenes
-- Labels accesibles para formularios
-- Navegación por teclado con indicadores de foco visibles
-
-### Características de Accesibilidad
-
-- Compatible con lectores de pantalla (NVDA, JAWS, VoiceOver)
-- Todos los elementos interactivos accesibles por teclado
-- Mensajes de error con `role="alert"` para notificaciones en tiempo real
-- Textos alternativos descriptivos vs decorativos apropiadamente marcados
-
-## Tecnologías
-
-- HTML5 semántico con ARIA
-- CSS3 (Flexbox, Grid, Animations)
-
-## Instalación
-
-```bash
-git clone https://github.com/sergio-416/bookmark-landing-page.git
-cd bookmark-landing-page
-Abre index.html en tu navegador o usa Live Server.
-Estructura del Proyecto
-bookmark-landing-page/
-├── index.html
-├── style.css
-├── images/
-│   ├── logo-bookmark.svg
-│   ├── illustration-hero.svg
-│   └── ...
-└── README.md
-Navegación por Teclado
-
-Tab: Navega entre elementos interactivos
-Enter/Space: Activa botones y enlaces
-Arrow keys: Navega entre tabs (cuando están enfocadas)
-
-Validación
-El código HTML cumple con:
-
-Estándares W3C HTML5
-WCAG 2.1 nivel AA
-Mejores prácticas de accesibilidad web
-
-Compatibilidad
-
-Navegadores modernos (Chrome, Firefox, Safari, Edge)
-Lectores de pantalla (NVDA, JAWS, VoiceOver)
-Dispositivos móviles y tablets
-
-Autor
-Sergio Morey - @sergio-416
-Licencia
-Este proyecto es de código abierto y está disponible bajo la licencia MIT.
 ```
+bookmark-manager/
+├── index.html          # Main HTML file with ARIA enhancements
+├── style.css           # Responsive styles with accessibility focus
+├── images/             # Project assets and illustrations
+└── README.md
+```
+
+## Usage
+
+Open `index.html` in any modern web browser. No build process or dependencies required.
+
+## Accessibility Features
+
+- Screen reader friendly with proper ARIA labels and roles
+- Keyboard navigation with visible focus states
+- Descriptive alt text for all meaningful images
+- Form error announcements for assistive technology
+- Semantic HTML structure
+
+## Author
+
+Sergio Morey - @sergio-416
+
+## License
+
+This project is for educational and portfolio purposes.
