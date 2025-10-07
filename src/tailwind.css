@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		overflow-x: hidden;
+		width: 100%;
+	}
+
+	body {
+		overflow-x: hidden;
+		width: 100%;
+		position: relative;
+		font-family: theme('fontFamily.sans');
+		font-size: theme('fontSize.base');
+		line-height: theme('lineHeight.base');
+		color: theme('colors.grayish-blue');
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: theme('colors.very-dark-blue');
+		font-weight: 500;
+	}
+
+	h1 {
+		font-size: 30px;
+		margin-bottom: theme('spacing.sm');
+	}
+
+	h2 {
+		font-size: 28px;
+		margin-bottom: theme('spacing.sm');
+	}
+
+	h3 {
+		font-size: 24px;
+		margin-bottom: theme('spacing.sm');
+	}
+
+	p {
+		line-height: theme('lineHeight.base');
+	}
+
+	@media (min-width: 768px) {
+		h1 {
+			font-size: 40px;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		h1 {
+			font-size: 48px;
+		}
+	}
+}
