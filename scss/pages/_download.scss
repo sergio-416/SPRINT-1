@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as *;
+
+.download {
+	padding: $spacing-3xl 0;
+}
+
+.download-header {
+	text-align: center;
+	margin-bottom: $spacing-xl;
+}
+
+.browser-cards {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-lg;
+	align-items: center;
+}
+
+@media (min-width: $breakpoint-tablet) {
+	.browser-cards {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+@media (min-width: $breakpoint-desktop) {
+	.browser-cards {
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
+	.browser-card {
+		&:nth-child(2) {
+			margin-top: $spacing-lg;
+		}
+
+		&:nth-child(3) {
+			margin-top: $spacing-3xl;
+		}
+	}
+}

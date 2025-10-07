@@ -1,0 +1,203 @@
+@use '../abstracts/variables' as *;
+
+.features {
+	padding: $spacing-3xl 0;
+	overflow: hidden;
+}
+
+.features-header {
+	text-align: center;
+	margin-bottom: $spacing-xl;
+}
+
+.tab-input {
+	display: none;
+}
+
+.tab-buttons {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: $spacing-2xl;
+}
+
+.tab-btn {
+	background: transparent;
+	border: none;
+	border-top: 1px solid rgba(145, 148, 162, 0.2);
+	padding: $spacing-sm;
+	font-size: 16px;
+	color: $grayish-blue;
+	cursor: pointer;
+	position: relative;
+	transition: color 0.3s ease;
+	text-align: center;
+
+	&:last-child {
+		border-bottom: 1px solid rgba(145, 148, 162, 0.2);
+	}
+
+	&:hover {
+		color: $soft-red;
+	}
+
+	&:focus {
+		outline: 2px solid $soft-blue;
+		outline-offset: 2px;
+		z-index: 1;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 4px;
+		background: $soft-red;
+		transition: width 0.3s ease;
+	}
+}
+
+#tab1:checked ~ .tab-buttons label[for='tab1'],
+#tab2:checked ~ .tab-buttons label[for='tab2'],
+#tab3:checked ~ .tab-buttons label[for='tab3'] {
+	color: $very-dark-blue;
+
+	&::after {
+		width: 140px;
+	}
+}
+
+.tab-pane {
+	display: none;
+	animation: fadeIn 0.5s ease;
+}
+
+#tab1:checked ~ .tab-content #content1,
+#tab2:checked ~ .tab-content #content2,
+#tab3:checked ~ .tab-content #content3 {
+	display: block;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.feature-content {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-2xl;
+	text-align: center;
+}
+
+.feature-image {
+	position: relative;
+
+	img {
+		width: 100%;
+		max-width: 400px;
+		margin: 0 auto;
+	}
+}
+
+#content1 .feature-image::before,
+#content2 .feature-image::before,
+#content3 .feature-image::before {
+	content: '';
+	position: absolute;
+	left: -50%;
+	top: 15%;
+	width: 100%;
+	height: 85%;
+	background: $soft-blue;
+	border-radius: 0 $border-radius-lg $border-radius-lg 0;
+	z-index: -1;
+}
+
+.feature-text {
+	p {
+		margin-bottom: 35px;
+	}
+}
+
+@media (min-width: $breakpoint-tablet) {
+	.tab-buttons {
+		flex-direction: row;
+		justify-content: center;
+		border-bottom: 1px solid rgba(145, 148, 162, 0.2);
+	}
+
+	.tab-btn {
+		border: none;
+		padding: $spacing-sm $spacing-lg;
+		flex: 1;
+		max-width: 243px;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	#tab1:checked ~ .tab-buttons label[for='tab1']::after,
+	#tab2:checked ~ .tab-buttons label[for='tab2']::after,
+	#tab3:checked ~ .tab-buttons label[for='tab3']::after {
+		width: 100%;
+	}
+}
+
+@media (min-width: $breakpoint-desktop) {
+	.features {
+		overflow: visible;
+	}
+
+	.tab-content {
+		overflow: visible;
+	}
+
+	.feature-content {
+		flex-direction: row;
+		align-items: center;
+		text-align: left;
+		gap: 100px;
+	}
+
+	.feature-image {
+		position: relative;
+		flex: 1;
+		min-width: 0;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: -80%;
+			top: 20%;
+			width: 150%;
+			height: 80%;
+			background: $soft-blue;
+			border-radius: 0 300px 300px 0;
+			z-index: -1;
+		}
+	}
+
+	#content1 .feature-image::before,
+	#content2 .feature-image::before,
+	#content3 .feature-image::before {
+		left: -80%;
+		top: 20%;
+		width: 150%;
+		height: 80%;
+		border-radius: 0 300px 300px 0;
+	}
+
+	.feature-text {
+		flex: 1;
+	}
+}
