@@ -20,18 +20,18 @@
 					<input
 						type="checkbox"
 						id="nav-toggle"
-						class="hidden desktop:hidden order-0"
+						class="nav-toggle-checkbox hidden desktop:hidden order-0"
 						aria-controls="main-menu"
 						aria-expanded="false" />
-					<div class="relative z-[1001] order-1 desktop:order-0">
+					<div class="logo-container relative z-[1001] order-1 desktop:order-0">
 						<img
 							src="images/logo-bookmark.svg"
 							alt="Bookmark logo"
-							class="block" />
+							class="logo block" />
 						<img
 							src="images/logo-mobile-active.svg"
 							alt="Bookmark logo"
-							class="hidden" />
+							class="logo hidden" />
 					</div>
 					<label
 						for="nav-toggle"
@@ -49,7 +49,7 @@
 							aria-hidden="true" />
 					</label>
 					<ul
-						class="hidden fixed top-0 left-0 right-0 bottom-0 bg-very-dark-blue/95 flex-col items-center justify-center list-none z-[999] p-0 overflow-y-auto desktop:flex desktop:static desktop:flex-row desktop:bg-transparent desktop:gap-lg desktop:order-1"
+						class="hidden fixed inset-0 bg-very-dark-blue/95 flex-col items-center justify-center list-none z-[999] p-0 overflow-y-auto desktop:!flex desktop:static desktop:flex-row desktop:bg-transparent desktop:gap-lg desktop:order-1"
 						id="main-menu"
 						role="menu">
 						<li
@@ -62,8 +62,26 @@
 								>Features</a
 							>
 						</li>
-						<li role="none"><a href="#pricing" role="menuitem">Pricing</a></li>
-						<li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+						<li
+							role="none"
+							class="m-0 w-[85%] max-w-[350px] text-center border-t border-white/20 py-[25px] first:border-t-0 desktop:m-0 desktop:w-auto desktop:border-none desktop:p-0">
+							<a
+								href="#pricing"
+								role="menuitem"
+								class="text-white no-underline uppercase tracking-[2px] text-lg block text-center focus:outline-2 focus:outline-soft-red focus:outline-offset-4 desktop:text-very-dark-blue desktop:text-[13px] desktop:tracking-[1.5px] desktop:transition-colors desktop:duration-base desktop:hover:text-soft-red"
+								>Pricing</a
+							>
+						</li>
+						<li
+							role="none"
+							class="m-0 w-[85%] max-w-[350px] text-center border-t border-white/20 py-[25px] first:border-t-0 desktop:m-0 desktop:w-auto desktop:border-none desktop:p-0">
+							<a
+								href="#contact"
+								role="menuitem"
+								class="text-white no-underline uppercase tracking-[2px] text-lg block text-center focus:outline-2 focus:outline-soft-red focus:outline-offset-4 desktop:text-very-dark-blue desktop:text-[13px] desktop:tracking-[1.5px] desktop:transition-colors desktop:duration-base desktop:hover:text-soft-red"
+								>Contact</a
+							>
+						</li>
 						<li
 							role="none"
 							class="m-0 w-[85%] max-w-[350px] text-center border-t border-white/20 py-[25px] desktop:m-0 desktop:w-auto desktop:border-none desktop:p-0">
