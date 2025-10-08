@@ -65,3 +65,24 @@
 		}
 	}
 }
+@layer components {
+	#nav-toggle:checked ~ .nav-menu {
+		display: flex;
+	}
+
+	#nav-toggle:checked ~ .logo-container .logo:first-child {
+		display: none;
+	}
+
+	#nav-toggle:checked ~ .logo-container .logo:last-child {
+		display: block;
+	}
+
+	#nav-toggle:checked ~ label img:first-child {
+		display: none;
+	}
+
+	#nav-toggle:checked ~ label img:last-child {
+		display: block;
+	}
+}

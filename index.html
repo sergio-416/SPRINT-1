@@ -14,55 +14,88 @@
 		<link rel="stylesheet" href="dist/output.css" />
 	</head>
 	<body>
-		<header class="header">
-			<nav class="navbar" aria-label="Main navigation">
-				<div class="nav-container">
+		<header class="relative py-md bg-white z-[1000]">
+			<nav class="relative" aria-label="Main navigation">
+				<div class="flex justify-between items-center px-sm">
 					<input
 						type="checkbox"
 						id="nav-toggle"
-						class="nav-toggle-checkbox"
+						class="hidden desktop:hidden order-0"
 						aria-controls="main-menu"
 						aria-expanded="false" />
-					<div class="logo-container">
+					<div class="relative z-[1001] order-1 desktop:order-0">
 						<img
 							src="images/logo-bookmark.svg"
 							alt="Bookmark logo"
-							class="logo logo-default" />
+							class="block" />
 						<img
 							src="images/logo-mobile-active.svg"
 							alt="Bookmark logo"
-							class="logo logo-mobile-active" />
+							class="hidden" />
 					</div>
 					<label
 						for="nav-toggle"
-						class="nav-toggle"
+						class="bg-transparent border-none cursor-pointer z-[1001] block order-2 desktop:hidden"
 						aria-label="Toggle navigation menu">
 						<img
 							src="images/icon-hamburger.svg"
 							alt=""
-							class="hamburger-icon"
+							class="block"
 							aria-hidden="true" />
 						<img
 							src="images/icon-close.svg"
 							alt=""
-							class="close-icon"
+							class="hidden"
 							aria-hidden="true" />
 					</label>
-					<ul class="nav-menu" id="main-menu" role="menu">
-						<li role="none">
-							<a href="#features" role="menuitem">Features</a>
+					<ul
+						class="hidden fixed top-0 left-0 right-0 bottom-0 bg-very-dark-blue/95 flex-col items-center justify-center list-none z-[999] p-0 overflow-y-auto desktop:flex desktop:static desktop:flex-row desktop:bg-transparent desktop:gap-lg desktop:order-1"
+						id="main-menu"
+						role="menu">
+						<li
+							role="none"
+							class="m-0 w-[85%] max-w-[350px] text-center border-t border-white/20 py-[25px] first:border-t-0 desktop:m-0 desktop:w-auto desktop:border-none desktop:p-0">
+							<a
+								href="#features"
+								role="menuitem"
+								class="text-white no-underline uppercase tracking-[2px] text-lg block text-center focus:outline-2 focus:outline-soft-red focus:outline-offset-4 desktop:text-very-dark-blue desktop:text-[13px] desktop:tracking-[1.5px] desktop:transition-colors desktop:duration-base desktop:hover:text-soft-red"
+								>Features</a
+							>
 						</li>
 						<li role="none"><a href="#pricing" role="menuitem">Pricing</a></li>
 						<li role="none"><a href="#contact" role="menuitem">Contact</a></li>
-						<li role="none">
-							<a href="#" class="btn-login" role="menuitem">Login</a>
+						<li
+							role="none"
+							class="m-0 w-[85%] max-w-[350px] text-center border-t border-white/20 py-[25px] desktop:m-0 desktop:w-auto desktop:border-none desktop:p-0">
+							<a
+								href="#"
+								role="menuitem"
+								class="inline-block py-[14px] px-[40px] rounded-sm m-0 border-2 border-white bg-transparent text-white text-center tracking-[2px] w-auto uppercase text-lg no-underline hover:bg-transparent hover:border-soft-red hover:text-soft-red focus:outline-2 focus:outline-soft-red focus:outline-offset-4 desktop:bg-soft-red desktop:text-white desktop:border-soft-red desktop:mt-0 desktop:py-[10px] desktop:px-[35px] desktop:text-[13px]"
+								>Login</a
+							>
 						</li>
-						<li class="nav-social" role="none">
-							<a href="#" aria-label="Visit our Facebook page">
-								<img src="images/icon-facebook.svg" alt="" aria-hidden="true" />
+						<li
+							role="none"
+							class="border-t-0 pt-lg flex gap-lg justify-center items-center desktop:hidden">
+							<a
+								href="#"
+								aria-label="Visit our Facebook page"
+								class="inline-block p-0 m-0 focus:outline-2 focus:outline-soft-red focus:outline-offset-4 focus:rounded-sm">
+								<img
+									src="images/icon-facebook.svg"
+									alt=""
+									aria-hidden="true"
+									class="w-6 h-6 transition-opacity duration-300" />
 							</a>
-							<a href="#" aria-label="Visit our Twitter page">
-								<img src="images/icon-twitter.svg" alt="" aria-hidden="true" />
+							<a
+								href="#"
+								aria-label="Visit our Twitter page"
+								class="inline-block p-0 m-0 focus:outline-2 focus:outline-soft-red focus:outline-offset-4 focus:rounded-sm">
+								<img
+									src="images/icon-twitter.svg"
+									alt=""
+									aria-hidden="true"
+									class="w-6 h-6 transition-opacity duration-300" />
 							</a>
 						</li>
 					</ul>
