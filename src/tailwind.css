@@ -253,4 +253,14 @@
 			filter: brightness(0) invert(1);
 		}
 	}
+
+	@media (min-width: 1024px) {
+		.browser-card:nth-child(2) {
+			@apply mt-lg;
+		}
+
+		.browser-card:nth-child(3) {
+			@apply mt-3xl;
+		}
+	}
 }
