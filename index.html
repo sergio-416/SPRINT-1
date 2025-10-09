@@ -122,33 +122,38 @@
 		</header>
 
 		<main>
-			<section class="hero">
+			<section class="py-md desktop:py-3xl">
 				<div class="container">
-					<div class="hero-content">
-						<div class="hero-text">
+					<div
+						class="flex flex-col-reverse gap-xl text-center desktop:flex-row desktop:items-center desktop:text-left">
+						<div class="desktop:flex-1">
 							<h1>A Simple Bookmark Manager</h1>
-							<p>
+							<p class="mb-md leading-base">
 								A clean and simple interface to organize your favorite websites.
 								Open a new browser tab and see your sites load instantly. Try it
 								for free.
 							</p>
-							<div class="hero-buttons">
+							<div
+								class="flex gap-[15px] justify-center flex-wrap tablet:justify-start">
 								<button class="btn btn-chrome">Get it on Chrome</button>
 								<button class="btn btn-firefox">Get it on Firefox</button>
 							</div>
 						</div>
-						<div class="hero-image">
+						<div class="hero-image-decorator relative desktop:flex-1">
 							<img
 								src="images/illustration-hero.svg"
-								alt="Illustration of the Bookmark Manager dashboard interface showing organized bookmarks" />
+								alt="Illustration of the Bookmark Manager dashboard interface showing organized bookmarks"
+								class="w-full h-auto max-w-[500px] mx-auto block" />
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="features" id="features">
+			<section
+				class="py-3xl overflow-hidden desktop:overflow-visible"
+				id="features">
 				<div class="container">
-					<div class="features-header">
+					<div class="text-center mb-xl">
 						<h2>Features</h2>
 						<p>
 							Our aim is to make it quick and easy for you to access your
@@ -158,29 +163,28 @@
 					</div>
 
 					<div class="tabs">
-						<!-- Tab system using radio buttons for mutual exclusivity -->
 						<input
 							type="radio"
 							name="feature-tab"
 							id="tab1"
-							class="tab-input"
+							class="hidden"
 							checked
 							aria-controls="content1" />
 						<input
 							type="radio"
 							name="feature-tab"
 							id="tab2"
-							class="tab-input"
+							class="hidden"
 							aria-controls="content2" />
 						<input
 							type="radio"
 							name="feature-tab"
 							id="tab3"
-							class="tab-input"
+							class="hidden"
 							aria-controls="content3" />
 
 						<div
-							class="tab-buttons"
+							class="tab-buttons flex flex-col mb-2xl tablet:flex-row tablet:justify-center tablet:border-b tablet:border-grayish-blue/20"
 							role="tablist"
 							aria-label="Feature categories">
 							<label
@@ -212,21 +216,24 @@
 							>
 						</div>
 
-						<div class="tab-content">
+						<div class="tab-content desktop:overflow-visible">
 							<div
 								class="tab-pane"
 								id="content1"
 								role="tabpanel"
 								aria-labelledby="tab1">
-								<div class="feature-content">
-									<div class="feature-image">
+								<div
+									class="flex flex-col gap-2xl text-center desktop:flex-row desktop:items-center desktop:text-left desktop:gap-[100px]">
+									<div
+										class="feature-image relative desktop:flex-1 desktop:min-w-0">
 										<img
 											src="images/illustration-features-tab-1.svg"
-											alt="Illustration showing the simple bookmarking interface with drag and drop functionality" />
+											alt="Illustration showing the simple bookmarking interface with drag and drop functionality"
+											class="w-full max-w-[400px] mx-auto block" />
 									</div>
-									<div class="feature-text">
+									<div class="feature-text desktop:flex-1">
 										<h3>Bookmark in one click</h3>
-										<p>
+										<p class="mb-[35px]">
 											Organize your bookmarks however you like. Our simple
 											drag-and-drop interface gives you complete control over
 											how you manage your favorite sites.
@@ -241,15 +248,18 @@
 								id="content2"
 								role="tabpanel"
 								aria-labelledby="tab2">
-								<div class="feature-content">
-									<div class="feature-image">
+								<div
+									class="flex flex-col gap-2xl text-center desktop:flex-row desktop:items-center desktop:text-left desktop:gap-[100px]">
+									<div
+										class="feature-image relative desktop:flex-1 desktop:min-w-0">
 										<img
 											src="images/illustration-features-tab-2.svg"
-											alt="Illustration demonstrating the intelligent search feature with search bar and results" />
+											alt="Illustration demonstrating the intelligent search feature with search bar and results"
+											class="w-full max-w-[400px] mx-auto block" />
 									</div>
-									<div class="feature-text">
+									<div class="feature-text desktop:flex-1">
 										<h3>Intelligent search</h3>
-										<p>
+										<p class="mb-[35px]">
 											Our powerful search feature will help you find saved sites
 											in no time at all. No need to trawl through all of your
 											bookmarks.
@@ -264,15 +274,18 @@
 								id="content3"
 								role="tabpanel"
 								aria-labelledby="tab3">
-								<div class="feature-content">
-									<div class="feature-image">
+								<div
+									class="flex flex-col gap-2xl text-center desktop:flex-row desktop:items-center desktop:text-left desktop:gap-[100px]">
+									<div
+										class="feature-image relative desktop:flex-1 desktop:min-w-0">
 										<img
 											src="images/illustration-features-tab-3.svg"
-											alt="Illustration showing bookmark sharing functionality with shareable link generation" />
+											alt="Illustration showing bookmark sharing functionality with shareable link generation"
+											class="w-full max-w-[400px] mx-auto block" />
 									</div>
-									<div class="feature-text">
+									<div class="feature-text desktop:flex-1">
 										<h3>Share your bookmarks</h3>
-										<p>
+										<p class="mb-[35px]">
 											Easily share your bookmarks and collections with others.
 											Create a shareable link that you can send at the click of
 											a button.

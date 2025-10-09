@@ -104,4 +104,111 @@
 			display: none !important;
 		}
 	}
+	.hero-image-decorator::after {
+		content: '';
+		position: absolute;
+		right: -50%;
+		top: 25%;
+		width: 100%;
+		height: 75%;
+		background: theme('colors.soft-blue');
+		border-radius: theme('borderRadius.lg') 0 0 theme('borderRadius.lg');
+		z-index: -1;
+	}
+	@layer components {
+		.tab-btn {
+			@apply bg-transparent border-none border-t border-grayish-blue/20 p-sm text-base text-grayish-blue cursor-pointer relative transition-colors duration-300 text-center;
+		}
+
+		.tab-btn:last-child {
+			@apply border-b border-grayish-blue/20;
+		}
+
+		.tab-btn:hover {
+			@apply text-soft-red;
+		}
+
+		.tab-btn:focus {
+			@apply outline-2 outline-soft-blue outline-offset-2 z-10;
+		}
+
+		.tab-btn::after {
+			content: '';
+			@apply absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-soft-red transition-all duration-300;
+		}
+
+		#tab1:checked ~ .tab-buttons label[for='tab1'],
+		#tab2:checked ~ .tab-buttons label[for='tab2'],
+		#tab3:checked ~ .tab-buttons label[for='tab3'] {
+			@apply text-very-dark-blue;
+		}
+
+		#tab1:checked ~ .tab-buttons label[for='tab1']::after,
+		#tab2:checked ~ .tab-buttons label[for='tab2']::after,
+		#tab3:checked ~ .tab-buttons label[for='tab3']::after {
+			width: 140px;
+		}
+
+		.tab-pane {
+			@apply hidden;
+			animation: fadeIn 0.5s ease;
+		}
+
+		#tab1:checked ~ .tab-content #content1,
+		#tab2:checked ~ .tab-content #content2,
+		#tab3:checked ~ .tab-content #content3 {
+			@apply block;
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: translateY(10px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.feature-image {
+			@apply relative;
+		}
+
+		.feature-image::before {
+			content: '';
+			@apply absolute -left-1/2 top-[15%] w-full h-[85%] bg-soft-blue z-[-1];
+			border-radius: 0 200px 200px 0;
+		}
+
+		@media (min-width: 768px) {
+			.tab-btn {
+				@apply border-none py-sm px-lg flex-1 max-w-[243px];
+			}
+
+			.tab-btn:last-child {
+				@apply border-b-0;
+			}
+
+			#tab1:checked ~ .tab-buttons label[for='tab1']::after,
+			#tab2:checked ~ .tab-buttons label[for='tab2']::after,
+			#tab3:checked ~ .tab-buttons label[for='tab3']::after {
+				@apply w-full;
+			}
+		}
+
+		@media (min-width: 1024px) {
+			.feature-image {
+				@apply flex-1 min-w-0;
+			}
+
+			.feature-image::before {
+				left: -80%;
+				top: 20%;
+				width: 150%;
+				height: 80%;
+				border-radius: 0 300px 300px 0;
+			}
+		}
+	}
 }
