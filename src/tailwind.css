@@ -104,6 +104,7 @@
 			display: none !important;
 		}
 	}
+
 	.hero-image-decorator::after {
 		content: '';
 		position: absolute;
@@ -115,6 +116,7 @@
 		border-radius: theme('borderRadius.lg') 0 0 theme('borderRadius.lg');
 		z-index: -1;
 	}
+
 	@layer components {
 		.tab-btn {
 			@apply bg-transparent border-none border-t border-grayish-blue/20 p-sm text-base text-grayish-blue cursor-pointer relative transition-colors duration-300 text-center;
@@ -210,6 +212,7 @@
 				border-radius: 0 300px 300px 0;
 			}
 		}
+
 		.faq-item summary::-webkit-details-marker {
 			display: none;
 		}
@@ -218,6 +221,36 @@
 			@apply rotate-180;
 			filter: invert(67%) sepia(89%) saturate(7044%) hue-rotate(350deg)
 				brightness(104%) contrast(97%);
+		}
+
+		.footer-nav-link {
+			@apply text-white no-underline uppercase tracking-[1.5px] text-[14px] block opacity-100 visible;
+		}
+
+		.footer-nav-link:hover {
+			@apply text-soft-red;
+		}
+
+		.footer-nav-link:focus {
+			@apply outline-2 outline-soft-red outline-offset-4;
+		}
+
+		.social-link {
+			@apply transition-opacity duration-300 block opacity-100 visible;
+		}
+
+		.social-link:focus {
+			@apply outline-2 outline-soft-red outline-offset-4 rounded-sm;
+		}
+
+		.social-link:hover .social-icon {
+			filter: invert(43%) sepia(18%) saturate(2009%) hue-rotate(313deg)
+				brightness(111%) contrast(96%);
+		}
+
+		.social-icon {
+			@apply block w-6 h-6 opacity-100 visible;
+			filter: brightness(0) invert(1);
 		}
 	}
 }
