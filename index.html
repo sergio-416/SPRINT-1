@@ -112,52 +112,49 @@
 							name="feature-tab"
 							id="tab1"
 							class="tab-input"
-							checked
-							aria-controls="content1" />
+							checked />
 						<input
 							type="radio"
 							name="feature-tab"
 							id="tab2"
-							class="tab-input"
-							aria-controls="content2" />
+							class="tab-input" />
 						<input
 							type="radio"
 							name="feature-tab"
 							id="tab3"
-							class="tab-input"
-							aria-controls="content3" />
+							class="tab-input" />
 
 						<div
 							class="tab-buttons"
 							role="tablist"
 							aria-label="Feature categories">
-							<label
-								for="tab1"
+							<button
+								type="button"
+								onclick="document.getElementById('tab1').checked=true"
 								class="tab-btn"
 								role="tab"
 								aria-selected="true"
-								aria-controls="content1"
-								tabindex="0"
-								>Simple Bookmarking</label
-							>
-							<label
-								for="tab2"
+								aria-controls="content1">
+								Simple Bookmarking
+							</button>
+							<button
+								type="button"
+								onclick="document.getElementById('tab2').checked=true"
 								class="tab-btn"
 								role="tab"
 								aria-selected="false"
-								aria-controls="content2"
-								tabindex="-1"
-								>Speedy Searching</label
-							>
-							<label
-								for="tab3"
+								aria-controls="content2">
+								Speedy Searching
+							</button>
+							<button
+								type="button"
+								onclick="document.getElementById('tab3').checked=true"
 								class="tab-btn"
 								role="tab"
 								aria-selected="false"
-								aria-controls="content3"
-								tabindex="-1"
-								>Easy Sharing</label
-							>
+								aria-controls="content3">
+								Easy Sharing
+							</button>
 						</div>
 
 						<div class="tab-content">
