@@ -867,9 +867,9 @@ body {
 		border-bottom: none;
 	}
 
-	#tab1:checked ~ .tab-buttons label[for='tab1']::after,
-	#tab2:checked ~ .tab-buttons label[for='tab2']::after,
-	#tab3:checked ~ .tab-buttons label[for='tab3']::after {
+	#tab1:checked ~ .tab-buttons .tab-btn:nth-child(1)::after,
+	#tab2:checked ~ .tab-buttons .tab-btn:nth-child(2)::after,
+	#tab3:checked ~ .tab-buttons .tab-btn:nth-child(3)::after {
 		width: 100%;
 	}
 
