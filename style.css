@@ -221,7 +221,6 @@ ol[role='list'] {
 	margin: 0;
 	border: 2px solid var(--white);
 	background: transparent;
-	color: var(--white) !important;
 	text-align: center;
 	box-sizing: border-box;
 	letter-spacing: 2px;
@@ -231,12 +230,31 @@ ol[role='list'] {
 .btn-login:hover {
 	background: transparent;
 	border-color: var(--soft-red);
-	color: var(--soft-red) !important;
 }
 
 .btn-login:focus {
 	outline: 2px solid var(--soft-red);
 	outline-offset: 4px;
+}
+
+.nav-menu .btn-login {
+	display: inline-block;
+	padding: 14px 40px;
+	border-radius: 5px;
+	margin: 0;
+	border: 2px solid var(--white);
+	background: transparent;
+	color: var(--white);
+	text-align: center;
+	box-sizing: border-box;
+	letter-spacing: 2px;
+	width: auto;
+}
+
+.nav-menu .btn-login:hover {
+	background: transparent;
+	border-color: var(--soft-red);
+	color: var(--soft-red);
 }
 
 .nav-social {
