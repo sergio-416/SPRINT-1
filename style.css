@@ -9,34 +9,22 @@
 html {
 	overflow-x: hidden;
 	width: 100%;
-	-webkit-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	text-size-adjust: 100%;
 }
 
 body {
-	min-height: 100vh;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
+img {
 	display: block;
 	max-width: 100%;
 	height: auto;
 }
 
 input,
-button,
-textarea,
-select {
+button {
 	font: inherit;
-	color: inherit;
 }
 
 button {
@@ -50,28 +38,15 @@ a {
 	color: inherit;
 }
 
-ul,
-ol {
+ul {
 	list-style: none;
 }
 
-p,
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+p {
 	overflow-wrap: break-word;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-textarea {
-	resize: vertical;
 }
 
 :root {
@@ -92,9 +67,7 @@ textarea {
 	--font-size-2xl: 30px;
 	--font-size-3xl: 40px;
 	--font-size-4xl: 48px;
-	--font-weight-normal: 400;
 	--font-weight-medium: 500;
-	--line-height-tight: 1.5;
 	--line-height-normal: 1.6;
 	--line-height-relaxed: 1.8;
 	--spacing-xs: 5px;
