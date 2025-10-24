@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .hero {
 	padding: $spacing-md 0 $spacing-3xl;

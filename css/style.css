@@ -650,16 +650,16 @@ p {
 
 .tab-buttons {
   display: flex;
-  direction: column;
+  flex-direction: column;
   margin-bottom: 60px;
 }
 
 .tab-btn {
   background: transparent;
   border: none;
-  border-top: width-style-color(1px, solid, hsla(230, 32%, 60%, 0.2));
+  border-top: 1px solid rgba(145, 148, 162, 0.2);
   padding: 20px;
-  font-size: 16px;
+  font-size: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: hsl(229, 8%, 60%);
   cursor: pointer;
   position: relative;
@@ -667,7 +667,7 @@ p {
   text-align: center;
 }
 .tab-btn:last-child {
-  border-bottom: width-style-color(1px, solid, hsla(230, 32%, 60%, 0.2));
+  border-bottom: 1px solid rgba(145, 148, 162, 0.2);
 }
 .tab-btn:hover {
   color: hsl(0, 94%, 66%);
@@ -723,7 +723,7 @@ p {
 }
 .feature-content {
   display: flex;
-  direction: column;
+  flex-direction: column;
   gap: 60px;
   text-align: center;
 }
@@ -759,7 +759,7 @@ p {
   .tab-buttons {
     flex-direction: row;
     justify-content: center;
-    border-bottom: width-style-color(1px, solid, hsla(230, 32%, 60%, 0.2));
+    border-bottom: 1px solid rgba(145, 148, 162, 0.2);
   }
   .tab-btn {
     border: none;
@@ -942,7 +942,7 @@ p {
 
 .newsletter-form {
   display: flex;
-  direction: column;
+  flex-direction: column;
   gap: 15px;
   max-width: 450px;
   margin: 0 auto;

@@ -26,7 +26,8 @@
 }
 
 .newsletter-form {
-	@include display-direction(flex, column);
+	display: flex;
+	flex-direction: column;
 	gap: 15px;
 	max-width: 450px;
 	margin: 0 auto;

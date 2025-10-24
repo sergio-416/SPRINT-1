@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .features {
 	padding: $spacing-3xl 0;
@@ -15,16 +16,17 @@
 }
 
 .tab-buttons {
-	@include display-direction(flex, column);
+	display: flex;
+	flex-direction: column;
 	margin-bottom: $spacing-2xl;
 }
 
 .tab-btn {
 	background: transparent;
 	border: none;
-	border-top: width-style-color(1px, solid, $shadow-gray);
+	border-top: 1px solid rgba(145, 148, 162, 0.2);
 	padding: $spacing-sm;
-	font-size: $font-size-base;
+	font-size: $font-family-base;
 	color: $grayish-blue;
 	cursor: pointer;
 	position: relative;
@@ -32,7 +34,7 @@
 	text-align: center;
 
 	&:last-child {
-		border-bottom: width-style-color(1px, solid, $shadow-gray);
+		border-bottom: 1px solid rgba(145, 148, 162, 0.2);
 	}
 
 	&:hover {
@@ -91,7 +93,8 @@
 }
 
 .feature-content {
-	@include display-direction(flex, column);
+	display: flex;
+	flex-direction: column;
 	gap: $spacing-2xl;
 	text-align: center;
 }
@@ -130,7 +133,7 @@
 	.tab-buttons {
 		flex-direction: row;
 		justify-content: center;
-		border-bottom: width-style-color(1px, solid, $shadow-gray);
+		border-bottom: 1px solid rgba(145, 148, 162, 0.2);
 	}
 
 	.tab-btn {

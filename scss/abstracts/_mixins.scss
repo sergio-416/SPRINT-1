@@ -1,6 +1,7 @@
-@mixin display-direction($display, $direction) {
+@mixin disp-dir-post($display: null, $direction: null, $position: null) {
 	display: $display;
 	direction: $direction;
+	position: $position;
 }
 
 @mixin width-style-color($width, $style, $color) {
