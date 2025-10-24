@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .newsletter {
 	background: $soft-blue;
@@ -25,8 +26,7 @@
 }
 
 .newsletter-form {
-	display: flex;
-	flex-direction: column;
+	@include display-direction(flex, column);
 	gap: 15px;
 	max-width: 450px;
 	margin: 0 auto;
