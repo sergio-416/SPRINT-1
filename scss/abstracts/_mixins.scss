@@ -1,7 +1,14 @@
-@mixin disp-dir-post($display: null, $direction: null, $position: null) {
+@mixin layout($display: null, $direction: null, $position: null) {
 	display: $display;
 	direction: $direction;
 	position: $position;
+}
+
+@mixin flex-align($jc: null, $ji: null, $ac: null, $ai: null) {
+	justify-content: $jc;
+	justify-items: $ji;
+	align-content: $ac;
+	align-items: $ai;
 }
 
 @mixin width-style-color($width, $style, $color) {
