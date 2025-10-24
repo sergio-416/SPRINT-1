@@ -1,18 +1,64 @@
-@mixin layout($display: null, $direction: null, $position: null) {
+@mixin layout(
+	$display: null,
+	$direction: null,
+	$flex-direction: null,
+	$position: null,
+	$z-index: null
+) {
 	display: $display;
 	direction: $direction;
+	flex-direction: $flex-direction;
 	position: $position;
+	z-index: $z-index;
 }
 
-@mixin flex-align($jc: null, $ji: null, $ac: null, $ai: null) {
+@mixin flex-layout($jc: null, $ji: null, $ac: null, $ai: null) {
 	justify-content: $jc;
 	justify-items: $ji;
 	align-content: $ac;
 	align-items: $ai;
 }
 
-@mixin width-style-color($width, $style, $color) {
-	width: $width;
+@mixin border($width: null, $style: null, $color: null) {
+	border-width: $width;
 	border-style: $style;
 	border-color: $color;
+}
+
+@mixin shape($radius: null, $overflow: null) {
+	border-radius: $radius;
+	overflow: $overflow;
+}
+
+@mixin size(
+	$width: null,
+	$height: null,
+	$min-width: null,
+	$max-width: null,
+	$min-height: null,
+	$max-height: null
+) {
+	width: $width;
+	height: $height;
+	min-width: $min-width;
+	max-width: $max-width;
+	min-height: $min-height;
+	max-height: $max-height;
+}
+
+@mixin coordinates(
+	$top: null,
+	$right: null,
+	$bottom: null,
+	$left: null,
+	$inset: null
+) {
+	@if $inset != null {
+		inset: $inset;
+	} @else {
+		top: $top;
+		right: $right;
+		bottom: $bottom;
+		left: $left;
+	}
 }

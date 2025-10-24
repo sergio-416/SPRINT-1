@@ -19,46 +19,41 @@
 }
 
 .hero-buttons {
-	display: flex;
+	@include layout(flex);
 	gap: 15px;
-	justify-content: center;
+	@include flex-layout(center);
 	flex-wrap: wrap;
 }
 
 .hero-image {
-	position: relative;
+	@include layout($position: relative);
 
 	img {
-		width: 100%;
-		height: auto;
-		max-width: 500px;
+		@include size($max-width-percentage, auto, $max-width: 500px);
 		margin: 0 auto;
-		display: block;
+		@include layout(block);
 	}
 
 	&::after {
 		content: '';
-		position: absolute;
-		right: -50%;
-		top: 25%;
-		width: 100%;
-		height: 75%;
+		@include layout($position: absolute, $z-index: -1);
+		@include coordinates(25%, -50%);
+		@include size(100%, 75%);
 		background: $soft-blue;
 		border-radius: $border-radius-lg 0 0 $border-radius-lg;
-		z-index: -1;
 	}
 }
 
 @media (min-width: $breakpoint-tablet) {
 	.hero-buttons {
-		justify-content: flex-start;
+		@include flex-layout(flex-start);
 	}
 }
 
 @media (min-width: $breakpoint-desktop) {
 	.hero-content {
-		flex-direction: row;
-		align-items: center;
+		@include layout($flex-direction: row);
+		@include flex-layout($ai: center);
 		text-align: left;
 	}
 
