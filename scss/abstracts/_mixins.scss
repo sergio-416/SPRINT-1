@@ -1,0 +1,10 @@
+@mixin display-direction($display, $direction) {
+	display: $display;
+	direction: $direction;
+}
+
+@mixin width-style-color($width, $style, $color) {
+	width: $width;
+	border-style: $style;
+	border-color: $color;
+}
