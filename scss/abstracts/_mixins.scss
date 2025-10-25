@@ -1,10 +1,8 @@
-@mixin layout(
-	$display: null,
+@mixin layout($display: null,
 	$direction: null,
 	$flex-direction: null,
 	$position: null,
-	$z-index: null
-) {
+	$z-index: null) {
 	display: $display;
 	direction: $direction;
 	flex-direction: $flex-direction;
@@ -30,14 +28,12 @@
 	overflow: $overflow;
 }
 
-@mixin size(
-	$width: null,
+@mixin size($width: null,
 	$height: null,
 	$min-width: null,
 	$max-width: null,
 	$min-height: null,
-	$max-height: null
-) {
+	$max-height: null) {
 	width: $width;
 	height: $height;
 	min-width: $min-width;
@@ -46,16 +42,16 @@
 	max-height: $max-height;
 }
 
-@mixin coordinates(
-	$top: null,
+@mixin coordinates($top: null,
 	$right: null,
 	$bottom: null,
 	$left: null,
-	$inset: null
-) {
-	@if $inset != null {
+	$inset: null) {
+	@if $inset !=null {
 		inset: $inset;
-	} @else {
+	}
+
+	@else {
 		top: $top;
 		right: $right;
 		bottom: $bottom;
