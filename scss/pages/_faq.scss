@@ -6,12 +6,12 @@
 	text-align: center;
 
 	.container {
-		max-width: $max-width-narrow;
+		@include size($max-width: $max-width-narrow);
 		margin: 0 auto;
 	}
 
 	.btn-primary {
-		display: inline-block;
+		@include layout(inline-block);
 		margin: 0 auto;
 	}
 }
@@ -22,26 +22,25 @@
 }
 
 .faq-list {
-	max-width: $max-width-narrow;
+	@include size($max-width: $max-width-narrow);
 	margin: 0 auto $spacing-xl;
 }
 
 .faq-item {
-	border-top: 1px solid rgba(145, 148, 162, 0.2);
+	border-top: 1px solid $grayish-blue-transparent;
 
 	&:last-child {
-		border-bottom: 1px solid rgba(145, 148, 162, 0.2);
+		border-bottom: 1px solid $grayish-blue-transparent;
 	}
 
 	summary {
+		@include layout(flex);
+		@include flex-layout(space-between, $ai: center);
 		padding: $spacing-sm 0;
 		cursor: pointer;
 		list-style: none;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		color: $very-dark-blue;
-		font-size: 16px;
+		font-size: $font-size-base;
 
 		&:hover {
 			color: $soft-red;
@@ -64,8 +63,7 @@
 
 	&[open] .arrow {
 		transform: rotate(180deg);
-		filter: invert(67%) sepia(89%) saturate(7044%) hue-rotate(350deg)
-			brightness(104%) contrast(97%);
+		filter: invert(67%) sepia(89%) saturate(7044%) hue-rotate(350deg) brightness(104%) contrast(97%);
 	}
 }
 
