@@ -7,7 +7,7 @@
 
 .hero-content {
 	@include layout(flex, column-reverse);
-	gap: $spacing-xl;
+	@include flex-layout($gap: $spacing-xl);
 	text-align: center;
 }
 
@@ -20,9 +20,7 @@
 
 .hero-buttons {
 	@include layout(flex);
-	gap: 15px;
-	@include flex-layout(center);
-	flex-wrap: wrap;
+	@include flex-layout(center, $wrap: wrap, $gap: 15px);
 }
 
 .hero-image {
@@ -30,15 +28,15 @@
 
 	img {
 		@include size($max-width-percentage, auto, $max-width: 500px);
-		margin: 0 auto;
 		@include layout(block);
+		margin: 0 auto;
 	}
 
 	&::after {
-		content: '';
 		@include layout($position: absolute, $z-index: -1);
 		@include coordinates(25%, -50%);
 		@include size(100%, 75%);
+		content: '';
 		background: $soft-blue;
 		border-radius: $border-radius-lg 0 0 $border-radius-lg;
 	}

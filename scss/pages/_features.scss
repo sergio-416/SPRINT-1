@@ -2,8 +2,8 @@
 @use '../abstracts/mixins' as *;
 
 .features {
-	padding: $spacing-3xl 0;
 	@include shape($overflow: hidden);
+	padding: $spacing-3xl 0;
 }
 
 .features-header {
@@ -91,7 +91,7 @@
 
 .feature-content {
 	@include layout(flex, $flex-direction: column);
-	gap: $spacing-2xl;
+	@include flex-layout($gap: $spacing-2xl);
 	text-align: center;
 }
 
@@ -157,9 +157,8 @@
 
 	.feature-content {
 		@include layout($flex-direction: row);
-		@include flex-layout($ai: center);
+		@include flex-layout($ai: center, $gap: 100px);
 		text-align: left;
-		gap: 100px;
 	}
 
 	.feature-image {

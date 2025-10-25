@@ -11,25 +11,22 @@
 }
 
 .browser-cards {
-	display: flex;
-	flex-direction: column;
+	@include layout(flex, $flex-direction: column);
+	@include flex-layout($ai: center);
 	gap: $spacing-lg;
-	align-items: center;
 }
 
 @media (min-width: $breakpoint-tablet) {
 	.browser-cards {
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
+		@include layout($flex-direction: row);
+		@include flex-layout(center, $wrap: wrap);
 	}
 }
 
 @media (min-width: $breakpoint-desktop) {
 	.browser-cards {
-		flex-direction: row;
-		justify-content: center;
-		align-items: flex-start;
+		@include layout($flex-direction: row);
+		@include flex-layout(center, $ai: flex-start);
 	}
 
 	.browser-card {

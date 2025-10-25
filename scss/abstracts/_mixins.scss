@@ -10,11 +10,22 @@
 	z-index: $z-index;
 }
 
-@mixin flex-layout($jc: null, $ji: null, $ac: null, $ai: null) {
+@mixin flex-layout($jc: null,
+	$ji: null,
+	$ac: null,
+	$ai: null,
+	$wrap: null,
+	$gap: null,
+	$row-gap: null,
+	$column-gap: null) {
 	justify-content: $jc;
 	justify-items: $ji;
 	align-content: $ac;
 	align-items: $ai;
+	flex-wrap: $wrap;
+	gap: $gap;
+	row-gap: $row-gap;
+	column-gap: $column-gap;
 }
 
 @mixin shape($radius: null, $overflow: null) {
