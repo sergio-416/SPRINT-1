@@ -17,12 +17,6 @@
 	align-items: $ai;
 }
 
-@mixin border($width: null, $style: null, $color: null) {
-	border-width: $width;
-	border-style: $style;
-	border-color: $color;
-}
-
 @mixin shape($radius: null, $overflow: null) {
 	border-radius: $radius;
 	overflow: $overflow;

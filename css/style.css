@@ -656,9 +656,7 @@ p {
 
 .tab-btn {
   position: relative;
-  border-width: 1px;
-  border-style: solid;
-  border-color: hsla(229, 8%, 60%, 0.2);
+  border-bottom: 1px solid hsla(229, 8%, 60%, 0.2);
   background: transparent;
   border: none;
   padding: 20px;
@@ -669,18 +667,13 @@ p {
   text-align: center;
 }
 .tab-btn:last-child {
-  border-width: 1px;
-  border-style: solid;
-  border-color: hsla(229, 8%, 60%, 0.2);
+  border-bottom: 1px solid hsla(229, 8%, 60%, 0.2);
 }
 .tab-btn:hover {
   color: hsl(0, 94%, 66%);
 }
 .tab-btn:focus {
-  z-index: 1;
-  border-width: 2px;
-  border-style: solid;
-  border-color: hsl(231, 69%, 60%);
+  outline: 2px solid hsl(231, 69%, 60%);
   outline-offset: 2px;
 }
 .tab-btn::after {
@@ -765,9 +758,7 @@ p {
   .tab-buttons {
     flex-direction: row;
     justify-content: center;
-    border-width: 1px;
-    border-style: solid;
-    border-color: hsla(229, 8%, 60%, 0.2);
+    border-bottom: 1px solid hsla(229, 8%, 60%, 0.2);
   }
   .tab-btn {
     max-width: 243px;

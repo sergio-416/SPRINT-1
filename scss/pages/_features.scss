@@ -22,7 +22,7 @@
 
 .tab-btn {
 	@include layout($position: relative);
-	@include border(1px, solid, $grayish-blue-transparent);
+	border-bottom: 1px solid $grayish-blue-transparent;
 	background: transparent;
 	border: none;
 	padding: $spacing-sm;
@@ -33,7 +33,7 @@
 	text-align: center;
 
 	&:last-child {
-		@include border(1px, solid, $grayish-blue-transparent);
+		border-bottom: 1px solid $grayish-blue-transparent;
 	}
 
 	&:hover {
@@ -41,8 +41,7 @@
 	}
 
 	&:focus {
-		@include layout($z-index: 1);
-		@include border(2px, solid, $soft-blue);
+		outline: 2px solid $soft-blue;
 		outline-offset: 2px;
 	}
 
@@ -126,7 +125,7 @@
 	.tab-buttons {
 		@include layout($flex-direction: row);
 		@include flex-layout(center);
-		@include border(1px, solid, $grayish-blue-transparent);
+		border-bottom: 1px solid $grayish-blue-transparent;
 	}
 
 	.tab-btn {
