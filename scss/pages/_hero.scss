@@ -35,7 +35,7 @@
 	&::after {
 		@include layout($position: absolute, $z-index: -1);
 		@include coordinates(25%, -50%);
-		@include size(100%, 75%);
+		@include size($max-width-percentage, 75%);
 		content: '';
 		background: $soft-blue;
 		border-radius: $border-radius-lg 0 0 $border-radius-lg;

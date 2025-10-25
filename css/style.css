@@ -287,15 +287,14 @@ p {
   }
 }
 .footer {
-  background: hsl(229, 31%, 21%);
-  padding: 40px 20px;
   position: relative;
   z-index: 1;
-  width: 100%;
   overflow: visible;
+  width: 100%;
+  background: hsl(229, 31%, 21%);
+  padding: 40px 20px;
 }
 .footer .container {
-  max-width: 100%;
   width: 100%;
   padding: 0;
 }
@@ -311,26 +310,26 @@ p {
 
 .footer-logo {
   display: block;
-  margin: 0 auto 20px;
   width: auto;
   height: auto;
+  margin: 0 auto 20px;
 }
 
 .footer-nav {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  text-align: center;
   width: 100%;
+  text-align: center;
   margin: 20px 0;
 }
 .footer-nav a {
-  color: #ffffff;
+  display: block;
+  color: hsl(0, 0%, 100%);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-size: 14px;
-  display: block;
   opacity: 1;
   visibility: visible;
 }
@@ -344,8 +343,8 @@ p {
 
 .social-links {
   display: flex;
-  gap: 30px;
   justify-content: center;
+  gap: 30px;
   width: 100%;
   opacity: 1;
   visibility: visible;
@@ -353,8 +352,8 @@ p {
   padding-top: 20px;
 }
 .social-links a {
-  transition: opacity 0.3s;
   display: block;
+  transition: opacity 0.3s;
   opacity: 1;
   visibility: visible;
 }
@@ -378,9 +377,9 @@ p {
 @media (min-width: 1024px) {
   .footer-content {
     display: grid;
+    gap: 40px;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 40px;
   }
   .footer-nav {
     display: flex;

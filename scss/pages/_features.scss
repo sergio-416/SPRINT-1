@@ -169,7 +169,7 @@
 		&::before {
 			@include layout($position: absolute, $z-index: -1);
 			@include coordinates(20%, $left: -80%);
-			@include size(150%, 80%);
+			@include size($width-150-percentage, 80%);
 			content: '';
 			background: $soft-blue;
 			border-radius: 0 300px 300px 0;
