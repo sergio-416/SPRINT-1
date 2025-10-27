@@ -542,13 +542,13 @@ p {
   }
 }
 .browser-card {
-  background: hsl(0, 0%, 100%);
-  border-radius: 10px;
-  box-shadow: 0 10px 20px -5px rgba(73, 93, 207, 0.2);
-  padding: 40px 30px;
-  text-align: center;
   width: 100%;
   max-width: 280px;
+  background: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px -5px hsla(229, 8%, 60%, 0.2);
+  padding: 40px 30px;
+  text-align: center;
 }
 .browser-card img:first-child {
   margin-bottom: 30px;
