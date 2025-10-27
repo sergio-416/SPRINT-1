@@ -99,33 +99,33 @@
 }
 
 .nav-toggle-checkbox:checked~.nav-menu {
+	.btn-login {
+		@include layout(inline-block);
+		@include size(auto);
+		padding: 14px 40px;
+		border-radius: $border-radius-sm;
+		margin: 0;
+		border: 2px solid $white;
+		background: transparent;
+		color: $white;
+		text-align: center;
+		box-sizing: border-box;
+		letter-spacing: 2px;
+
+		&:hover {
+			background: transparent;
+			border-color: $soft-red;
+			color: $soft-red;
+		}
+
+		&:focus {
+			outline: 2px solid $soft-red;
+			outline-offset: 4px;
+		}
+	}
 	@include layout(flex);
 }
 
-.btn-login {
-	@include layout(inline-block);
-	@include size(auto);
-	padding: 14px 40px;
-	border-radius: $border-radius-sm;
-	margin: 0;
-	border: 2px solid $white;
-	background: transparent;
-	color: $white !important;
-	text-align: center;
-	box-sizing: border-box;
-	letter-spacing: 2px;
-
-	&:hover {
-		background: transparent;
-		border-color: $soft-red;
-		color: $soft-red !important;
-	}
-
-	&:focus {
-		outline: 2px solid $soft-red;
-		outline-offset: 4px;
-	}
-}
 
 .nav-social {
 	@include layout(flex);
@@ -193,13 +193,14 @@
 				color: $soft-red;
 			}
 		}
+
+		.btn-login {
+			background: $soft-red;
+			color: $white;
+			border-color: $soft-red;
+			margin-top: 0;
+			padding: 10px 35px;
+		}
 	}
 
-	.btn-login {
-		background: $soft-red;
-		color: $white;
-		border-color: $soft-red;
-		margin-top: 0;
-		padding: 10px 35px;
-	}
 }
