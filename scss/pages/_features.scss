@@ -1,8 +1,9 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .features {
+	@include shape($overflow: hidden);
 	padding: $spacing-3xl 0;
-	overflow: hidden;
 }
 
 .features-header {
@@ -11,29 +12,28 @@
 }
 
 .tab-input {
-	display: none;
+	@include layout(none);
 }
 
 .tab-buttons {
-	display: flex;
-	flex-direction: column;
+	@include layout(flex, $flex-direction: column);
 	margin-bottom: $spacing-2xl;
 }
 
 .tab-btn {
+	@include layout($position: relative);
+	border-bottom: 1px solid $grayish-blue-transparent;
 	background: transparent;
 	border: none;
-	border-top: 1px solid rgba(145, 148, 162, 0.2);
 	padding: $spacing-sm;
-	font-size: 16px;
+	font-size: $font-size-base;
 	color: $grayish-blue;
 	cursor: pointer;
-	position: relative;
 	transition: color 0.3s ease;
 	text-align: center;
 
 	&:last-child {
-		border-bottom: 1px solid rgba(145, 148, 162, 0.2);
+		border-bottom: 1px solid $grayish-blue-transparent;
 	}
 
 	&:hover {
@@ -43,41 +43,38 @@
 	&:focus {
 		outline: 2px solid $soft-blue;
 		outline-offset: 2px;
-		z-index: 1;
 	}
 
 	&::after {
+		@include layout($position: absolute);
+		@include coordinates($bottom: 0, $left: 50%);
+		@include size(0, 4px);
 		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
 		transform: translateX(-50%);
-		width: 0;
-		height: 4px;
 		background: $soft-red;
 		transition: width 0.3s ease;
 	}
 }
 
-#tab1:checked ~ .tab-buttons label[for='tab1'],
-#tab2:checked ~ .tab-buttons label[for='tab2'],
-#tab3:checked ~ .tab-buttons label[for='tab3'] {
+#tab1:checked~.tab-buttons label[for='tab1'],
+#tab2:checked~.tab-buttons label[for='tab2'],
+#tab3:checked~.tab-buttons label[for='tab3'] {
 	color: $very-dark-blue;
 
 	&::after {
-		width: 140px;
+		@include size(140px);
 	}
 }
 
 .tab-pane {
-	display: none;
+	@include layout(none);
 	animation: fadeIn 0.5s ease;
 }
 
-#tab1:checked ~ .tab-content #content1,
-#tab2:checked ~ .tab-content #content2,
-#tab3:checked ~ .tab-content #content3 {
-	display: block;
+#tab1:checked~.tab-content #content1,
+#tab2:checked~.tab-content #content2,
+#tab3:checked~.tab-content #content3 {
+	@include layout(block);
 }
 
 @keyframes fadeIn {
@@ -85,6 +82,7 @@
 		opacity: 0;
 		transform: translateY(10px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateY(0);
@@ -92,18 +90,16 @@
 }
 
 .feature-content {
-	display: flex;
-	flex-direction: column;
-	gap: $spacing-2xl;
+	@include layout(flex, $flex-direction: column);
+	@include flex-layout($gap: $spacing-2xl);
 	text-align: center;
 }
 
 .feature-image {
-	position: relative;
+	@include layout($position: relative);
 
 	img {
-		width: 100%;
-		max-width: 400px;
+		@include size($max-width-percentage, $max-width: 400px);
 		margin: 0 auto;
 	}
 }
@@ -111,15 +107,12 @@
 #content1 .feature-image::before,
 #content2 .feature-image::before,
 #content3 .feature-image::before {
+	@include layout($position: absolute, $z-index: -1);
+	@include size($max-width-percentage, 85%);
+	@include coordinates(15%, $left: -50%);
 	content: '';
-	position: absolute;
-	left: -50%;
-	top: 15%;
-	width: 100%;
-	height: 85%;
 	background: $soft-blue;
 	border-radius: 0 $border-radius-lg $border-radius-lg 0;
-	z-index: -1;
 }
 
 .feature-text {
@@ -130,70 +123,64 @@
 
 @media (min-width: $breakpoint-tablet) {
 	.tab-buttons {
-		flex-direction: row;
-		justify-content: center;
-		border-bottom: 1px solid rgba(145, 148, 162, 0.2);
+		@include layout($flex-direction: row);
+		@include flex-layout(center);
+		border-bottom: 1px solid $grayish-blue-transparent;
 	}
 
 	.tab-btn {
+		@include size($max-width: 243px);
 		border: none;
 		padding: $spacing-sm $spacing-lg;
 		flex: 1;
-		max-width: 243px;
 
 		&:last-child {
 			border-bottom: none;
 		}
 	}
 
-	#tab1:checked ~ .tab-buttons label[for='tab1']::after,
-	#tab2:checked ~ .tab-buttons label[for='tab2']::after,
-	#tab3:checked ~ .tab-buttons label[for='tab3']::after {
-		width: 100%;
+	#tab1:checked~.tab-buttons label[for='tab1']::after,
+	#tab2:checked~.tab-buttons label[for='tab2']::after,
+	#tab3:checked~.tab-buttons label[for='tab3']::after {
+		@include size($max-width-percentage);
 	}
 }
 
 @media (min-width: $breakpoint-desktop) {
 	.features {
-		overflow: visible;
+		@include shape($overflow: visible);
 	}
 
 	.tab-content {
-		overflow: visible;
+		@include shape($overflow: visible);
 	}
 
 	.feature-content {
-		flex-direction: row;
-		align-items: center;
+		@include layout($flex-direction: row);
+		@include flex-layout($ai: center, $gap: 100px);
 		text-align: left;
-		gap: 100px;
 	}
 
 	.feature-image {
-		position: relative;
+		@include layout($position: relative);
+		@include size($min-width: 0);
 		flex: 1;
-		min-width: 0;
 
 		&::before {
+			@include layout($position: absolute, $z-index: -1);
+			@include coordinates(20%, $left: -80%);
+			@include size($width-150-percentage, 80%);
 			content: '';
-			position: absolute;
-			left: -80%;
-			top: 20%;
-			width: 150%;
-			height: 80%;
 			background: $soft-blue;
 			border-radius: 0 300px 300px 0;
-			z-index: -1;
 		}
 	}
 
 	#content1 .feature-image::before,
 	#content2 .feature-image::before,
 	#content3 .feature-image::before {
-		left: -80%;
-		top: 20%;
-		width: 150%;
-		height: 80%;
+		@include coordinates(20%, $left: -80%);
+		@include size($max-width-percentage, 80%);
 		border-radius: 0 300px 300px 0;
 	}
 

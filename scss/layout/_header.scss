@@ -1,8 +1,8 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .header {
-	position: relative;
+	@include layout($position: relative, $z-index: 1000);
 	padding: $spacing-md 0;
 	background: $white;
-	z-index: 1000;
 }

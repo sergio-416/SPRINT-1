@@ -1,8 +1,8 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .container {
-	width: 90%;
-	max-width: $max-width-container;
+	@include size($max-width-percentage - 10%, $max-width: $max-width-container);
 	margin: 0 auto;
 	padding: 0 $spacing-sm;
 }
