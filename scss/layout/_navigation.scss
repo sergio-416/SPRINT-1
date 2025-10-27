@@ -2,88 +2,77 @@
 @use '../abstracts/mixins' as *;
 
 .navbar {
-	position: relative;
+	@include layout($position: relative);
 }
 
 .nav-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	@include layout(flex);
+	@include flex-layout(space-between, $ai: center);
 	padding: 0 $spacing-sm;
 }
 
 .nav-toggle-checkbox {
-	display: none;
+	@include layout(none);
 	order: 0;
 }
 
 .logo-container {
-	position: relative;
-	z-index: 1001;
+	@include layout($position: relative, $z-index: 1001);
 	order: 1;
 }
 
 .logo {
-	display: block;
+	@include layout(block);
 }
 
 .logo-mobile-active {
-	display: none;
+	@include layout(none);
 }
 
-.nav-toggle-checkbox:checked ~ .logo-container .logo-default {
-	display: none;
+.nav-toggle-checkbox:checked~.logo-container .logo-default {
+	@include layout(none);
 }
 
-.nav-toggle-checkbox:checked ~ .logo-container .logo-mobile-active {
-	display: block;
+.nav-toggle-checkbox:checked~.logo-container .logo-mobile-active {
+	@include layout(block);
 }
 
 .nav-toggle {
+	@include layout(block, $z-index: 1001);
 	background: transparent;
 	border: none;
 	cursor: pointer;
-	z-index: 1001;
-	display: block;
 	order: 2;
 }
 
 .close-icon {
-	display: none;
+	@include layout(none);
 }
 
-.nav-toggle-checkbox:checked ~ .nav-toggle .hamburger-icon {
-	display: none;
+.nav-toggle-checkbox:checked~.nav-toggle .hamburger-icon {
+	@include layout(none);
 }
 
-.nav-toggle-checkbox:checked ~ .nav-toggle .close-icon {
-	display: block;
+.nav-toggle-checkbox:checked~.nav-toggle .close-icon {
+	@include layout(block);
 }
 
-.nav-toggle-checkbox[aria-expanded='true'] ~ .nav-menu {
-	display: flex;
+.nav-toggle-checkbox[aria-expanded='true']~.nav-menu {
+	@include layout(flex);
 }
 
 .nav-menu {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(37, 43, 70, 0.95);
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	@include layout(none, $flex-direction: column, $position: fixed, $z-index: 999);
+	@include flex-layout(center, $ai: center);
+	@include coordinates($inset: 0);
+	background: $dark-gray;
 	list-style: none;
-	z-index: 999;
 	padding: 0;
 	overflow-y: auto;
 
 	li {
+		@include size($width: 85%, $max-width: 350px);
 		margin: 0;
-		width: 85%;
-		max-width: 350px;
 		text-align: center;
 		border-top: 1px solid rgba(255, 255, 255, 0.2);
 		padding: 25px 0;
@@ -94,12 +83,12 @@
 	}
 
 	a {
+		@include layout(block);
 		color: $white;
 		text-decoration: none;
 		text-transform: uppercase;
 		letter-spacing: 2px;
-		font-size: 18px;
-		display: block;
+		font-size: $font-size-base + 2px;
 		text-align: center;
 
 		&:focus {
@@ -109,12 +98,13 @@
 	}
 }
 
-.nav-toggle-checkbox:checked ~ .nav-menu {
-	display: flex;
+.nav-toggle-checkbox:checked~.nav-menu {
+	@include layout(flex);
 }
 
 .btn-login {
-	display: inline-block;
+	@include layout(inline-block);
+	@include size(auto);
 	padding: 14px 40px;
 	border-radius: $border-radius-sm;
 	margin: 0;
@@ -124,7 +114,6 @@
 	text-align: center;
 	box-sizing: border-box;
 	letter-spacing: 2px;
-	width: auto;
 
 	&:hover {
 		background: transparent;
@@ -139,15 +128,14 @@
 }
 
 .nav-social {
+	@include layout(flex);
+	@include flex-layout(center, $gap: $spacing-lg);
 	border-top: none;
 	padding-top: $spacing-lg;
-	display: flex;
-	gap: $spacing-lg;
-	justify-content: center;
 	align-items: center;
 
 	a {
-		display: inline-block;
+		@include layout(inline-block);
 		padding: 0;
 		margin: 0;
 
@@ -158,22 +146,21 @@
 		}
 
 		&:hover img {
-			filter: invert(43%) sepia(18%) saturate(2009%) hue-rotate(313deg)
-				brightness(111%) contrast(96%);
+			filter: invert(43%) sepia(18%) saturate(2009%) hue-rotate(313deg) brightness(111%) contrast(96%);
 		}
 	}
 
 	img {
-		width: 24px;
-		height: 24px;
+		@include size(24px, 24px);
 		transition: opacity 0.3s;
 	}
 }
 
 @media (min-width: $breakpoint-desktop) {
+
 	.nav-toggle-checkbox,
 	.nav-toggle {
-		display: none;
+		@include layout(none);
 	}
 
 	.logo-container {
@@ -181,24 +168,23 @@
 	}
 
 	.nav-menu {
-		display: flex;
-		position: static;
-		flex-direction: row;
+		@include layout(flex, $flex-direction: row, $position: static);
+		@include flex-layout($gap: $spacing-lg);
 		background: transparent;
 		align-items: center;
 		gap: $spacing-lg;
 		order: 1;
 
 		li {
+			@include size(auto);
 			margin: 0;
-			width: auto;
 			border: none;
 			padding: 0;
 		}
 
 		a {
 			color: $very-dark-blue;
-			font-size: 13px;
+			font-size: $font-size-base - 3px;
 			text-transform: uppercase;
 			letter-spacing: 1.5px;
 			transition: color 0.3s;
