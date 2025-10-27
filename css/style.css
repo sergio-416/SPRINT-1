@@ -573,7 +573,7 @@ p {
 
 .hero-content {
   display: flex;
-  direction: column-reverse;
+  flex-direction: column-reverse;
   gap: 50px;
   text-align: center;
 }

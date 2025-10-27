@@ -6,7 +6,7 @@
 }
 
 .hero-content {
-	@include layout(flex, column-reverse);
+	@include layout(flex, $flex-direction: column-reverse);
 	@include flex-layout($gap: $spacing-xl);
 	text-align: center;
 }
