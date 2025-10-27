@@ -2,15 +2,15 @@
 @use '../abstracts/mixins' as *;
 
 .form-group {
-	position: relative;
+	@include layout($position: relative);
 	margin-bottom: $spacing-lg;
 
 	input {
-		width: 100%;
+		@include size($max-width-percentage);
 		padding: 15px 20px;
 		border: 2px solid transparent;
 		border-radius: $border-radius-sm;
-		font-size: 14px;
+		font-size: $font-size-base - 2px;
 		outline: none;
 
 		&:focus {
@@ -25,12 +25,12 @@
 			}
 
 			&:not(:focus):not(:placeholder-shown) {
-				~ .error-icon {
-					display: block;
+				~.error-icon {
+					@include layout(block);
 				}
 
-				~ .error-message {
-					display: block;
+				~.error-message {
+					@include layout(block);
 				}
 			}
 
@@ -49,37 +49,32 @@
 }
 
 .error-icon {
-	position: absolute;
+	@include layout(none, $position: absolute);
 	right: 15px;
 	top: 50%;
 	transform: translateY(-50%);
-	display: none;
 	transition: $transition-base;
 }
 
 .error-message {
-	display: none;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	right: 0;
+	@include layout(none, $position: absolute, $z-index: 10);
+	@include coordinates(100%, 0, $left: 0);
 	background: $soft-red;
 	color: $white;
-	font-size: 10px;
+	font-size: $font-size-base - 6px;
 	padding: 5px 12px;
 	border-radius: 0 0 $border-radius-sm $border-radius-sm;
 	font-style: italic;
 	text-align: left;
 	margin-top: -2px;
-	z-index: 10;
 	transition: $transition-base;
 }
 
 @media (min-width: $breakpoint-desktop) {
 	.form-group {
+		@include layout($position: relative);
+		@include size($max-width: 300px);
 		flex: 1;
-		max-width: 300px;
-		position: relative;
 		margin-bottom: 0;
 
 		input:invalid:not(:placeholder-shown) {
