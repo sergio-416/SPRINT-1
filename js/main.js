@@ -1,5 +1,8 @@
 'use strict';
 
+import { initNavigation } from './navigation.js';
+
 document.addEventListener('DOMContentLoaded', () => {
-	console.log('Main JS loaded');
+	initNavigation();
+	console.log('Main JS loaded - Navigation initialized');
 });
