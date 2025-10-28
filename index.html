@@ -480,14 +480,21 @@
 				</div>
 			</section>
 
-			<section class="newsletter" id="contact">
-				<div class="container">
-					<p class="newsletter-label">35,000+ already joined</p>
-					<h2>Stay up-to-date with what we're doing</h2>
+			<section class="py-16 bg-soft-blue text-white text-center" id="contact">
+				<div class="w-[90%] max-w-[1110px] mx-auto px-5">
+					<p class="text-sm uppercase tracking-[5px] mb-8 font-medium">
+						35,000+ already joined
+					</p>
+					<h2
+						class="text-2xl md:text-3xl mb-8 font-medium max-w-[440px] mx-auto">
+						Stay up-to-date with what we're doing
+					</h2>
 
-					<form class="newsletter-form" novalidate>
-						<!-- Email validation with ARIA live error announcements -->
-						<div class="form-group">
+					<form
+						id="newsletter-form"
+						class="flex flex-col lg:flex-row lg:justify-center lg:items-start gap-4 lg:gap-4 max-w-[480px] mx-auto"
+						novalidate>
+						<div class="relative flex-1 lg:max-w-[300px]">
 							<label for="email-input" class="visually-hidden"
 								>Email address</label
 							>
@@ -497,17 +504,26 @@
 								placeholder="Enter your email address"
 								aria-invalid="false"
 								aria-describedby="email-error"
+								class="w-full py-3 px-5 rounded-base border-2 border-transparent text-very-dark-blue text-base transition-all duration-fast focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2 focus:border-soft-blue"
 								required />
 							<img
+								id="error-icon"
 								src="images/icon-error.svg"
 								alt=""
-								class="error-icon"
+								class="hidden absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5"
 								aria-hidden="true" />
-							<span id="email-error" class="error-message" role="alert"
-								>Whoops, make sure it's an email</span
-							>
+							<span
+								id="email-error"
+								class="hidden absolute top-full left-0 right-0 bg-soft-red text-white text-xs italic py-1 px-3 rounded-b-base -mt-0.5 text-left"
+								role="alert">
+								Whoops, make sure it's an email
+							</span>
 						</div>
-						<button type="submit" class="btn btn-secondary">Contact Us</button>
+						<button
+							type="submit"
+							class="inline-block py-3 px-6 lg:px-8 border-2 border-soft-red rounded-base text-base font-medium cursor-pointer transition-all duration-fast no-underline bg-soft-red text-white hover:bg-white hover:text-soft-red hover:border-soft-red focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2 whitespace-nowrap">
+							Contact Us
+						</button>
 					</form>
 				</div>
 			</section>
