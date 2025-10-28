@@ -1,8 +1,10 @@
 'use strict';
 
 import { initNavigation } from './navigation.js';
+import { initFeatures } from './features.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	initNavigation();
-	console.log('Main JS loaded - Navigation initialized');
+	initFeatures();
+	console.log('Main JS loaded - Navigation and Features initialized');
 });
