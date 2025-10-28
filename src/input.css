@@ -84,4 +84,29 @@
 			height: 85%;
 		}
 	}
+	.faq-item {
+		@apply border-b border-grayish-blue/20 py-5 cursor-pointer;
+	}
+
+	.faq-item summary {
+		@apply flex justify-between items-center text-very-dark-blue text-base md:text-lg list-none cursor-pointer transition-colors duration-fast hover:text-soft-red;
+	}
+
+	.faq-item summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.faq-item summary .arrow {
+		@apply transition-all duration-300;
+	}
+
+	.faq-item[open] summary .arrow {
+		@apply rotate-180;
+		filter: brightness(0) saturate(100%) invert(43%) sepia(96%) saturate(1600%)
+			hue-rotate(330deg) brightness(100%) contrast(95%);
+	}
+
+	.faq-item p {
+		@apply mt-5 text-grayish-blue leading-relaxed text-sm md:text-base;
+	}
 }
