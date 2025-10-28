@@ -151,138 +151,147 @@
 				</div>
 			</section>
 
-			<section class="features" id="features">
-				<div class="container">
-					<div class="features-header">
-						<h2>Features</h2>
-						<p>
+			<section class="py-0 pb-20 lg:overflow-visible" id="features">
+				<div class="w-[90%] max-w-[1110px] mx-auto px-5">
+					<div class="text-center max-w-[540px] mx-auto mb-10">
+						<h2
+							class="text-2xl md:text-3xl text-very-dark-blue mb-4 font-medium">
+							Features
+						</h2>
+						<p class="leading-relaxed text-grayish-blue">
 							Our aim is to make it quick and easy for you to access your
 							favorite websites. Your bookmarks sync between your devices so you
 							can access them on the go.
 						</p>
 					</div>
 
-					<div class="tabs">
-						<!-- Tab system using radio buttons for mutual exclusivity -->
-						<input
-							type="radio"
-							name="feature-tab"
-							id="tab1"
-							class="tab-input"
-							checked />
-						<input
-							type="radio"
-							name="feature-tab"
-							id="tab2"
-							class="tab-input" />
-						<input
-							type="radio"
-							name="feature-tab"
-							id="tab3"
-							class="tab-input" />
-
+					<div class="mb-16">
 						<div
-							class="tab-buttons"
+							class="flex flex-col lg:flex-row lg:justify-center lg:border-b lg:border-gray-300/20"
 							role="tablist"
 							aria-label="Feature categories">
 							<button
 								type="button"
-								onclick="document.getElementById('tab1').checked=true"
-								class="tab-btn"
+								data-tab="tab1"
+								class="tab-btn border-b border-gray-300/20 lg:border-b-0 py-5 px-10 lg:flex-1 lg:max-w-[243px] text-grayish-blue text-base text-center cursor-pointer transition-colors duration-fast relative hover:text-soft-red focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2 last:border-b-0 lg:last:border-b"
 								role="tab"
 								aria-selected="true"
-								aria-controls="content1"
-								tabindex="0">
+								aria-controls="panel1">
 								Simple Bookmarking
 							</button>
 							<button
 								type="button"
-								onclick="document.getElementById('tab2').checked=true"
-								class="tab-btn"
+								data-tab="tab2"
+								class="tab-btn border-b border-gray-300/20 lg:border-b-0 py-5 px-10 lg:flex-1 lg:max-w-[243px] text-grayish-blue text-base text-center cursor-pointer transition-colors duration-fast relative hover:text-soft-red focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2 last:border-b-0 lg:last:border-b"
 								role="tab"
 								aria-selected="false"
-								aria-controls="content2"
-								tabindex="-1">
+								aria-controls="panel2">
 								Speedy Searching
 							</button>
 							<button
 								type="button"
-								onclick="document.getElementById('tab3').checked=true"
-								class="tab-btn"
+								data-tab="tab3"
+								class="tab-btn border-b border-gray-300/20 lg:border-b-0 py-5 px-10 lg:flex-1 lg:max-w-[243px] text-grayish-blue text-base text-center cursor-pointer transition-colors duration-fast relative hover:text-soft-red focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2 last:border-b-0 lg:last:border-b"
 								role="tab"
 								aria-selected="false"
-								aria-controls="content3"
-								tabindex="-1">
+								aria-controls="panel3">
 								Easy Sharing
 							</button>
 						</div>
 
-						<div class="tab-content">
+						<div class="mt-16 lg:overflow-visible">
 							<div
-								class="tab-pane"
-								id="content1"
+								data-panel="tab1"
+								class="hidden"
+								id="panel1"
 								role="tabpanel"
 								aria-labelledby="tab1">
-								<div class="feature-content">
-									<div class="feature-image">
+								<div
+									class="flex flex-col lg:flex-row lg:items-center text-center lg:text-left gap-12 lg:gap-24">
+									<div class="flex-1 relative lg:min-w-0 feature-image-bg">
 										<img
 											src="images/illustration-features-tab-1.svg"
-											alt="Illustration showing the simple bookmarking interface with drag and drop functionality" />
+											alt="Illustration showing the simple bookmarking interface with drag and drop functionality"
+											class="block max-w-full h-auto" />
 									</div>
-									<div class="feature-text">
-										<h3>Bookmark in one click</h3>
-										<p>
+									<div class="flex-1">
+										<h3
+											class="text-2xl md:text-3xl text-very-dark-blue mb-4 font-medium">
+											Bookmark in one click
+										</h3>
+										<p class="mb-8 leading-relaxed text-grayish-blue">
 											Organize your bookmarks however you like. Our simple
 											drag-and-drop interface gives you complete control over
 											how you manage your favorite sites.
 										</p>
-										<button class="btn btn-primary">More Info</button>
+										<button
+											class="inline-block py-3 px-6 border-2 border-soft-blue rounded-base text-base font-medium cursor-pointer transition-all duration-fast no-underline bg-soft-blue text-white hover:bg-white hover:text-very-dark-blue hover:border-very-dark-blue hover:shadow-none focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2">
+											More Info
+										</button>
 									</div>
 								</div>
 							</div>
 
 							<div
-								class="tab-pane"
-								id="content2"
+								data-panel="tab2"
+								class="hidden"
+								id="panel2"
 								role="tabpanel"
 								aria-labelledby="tab2">
-								<div class="feature-content">
-									<div class="feature-image">
+								<div
+									class="flex flex-col lg:flex-row lg:items-center text-center lg:text-left gap-12 lg:gap-24">
+									<div class="flex-1 relative lg:min-w-0 feature-image-bg">
 										<img
 											src="images/illustration-features-tab-2.svg"
-											alt="Illustration demonstrating the intelligent search feature with search bar and results" />
+											alt="Illustration demonstrating the intelligent search feature with search bar and results"
+											class="block max-w-full h-auto" />
 									</div>
-									<div class="feature-text">
-										<h3>Intelligent search</h3>
-										<p>
+									<div class="flex-1">
+										<h3
+											class="text-2xl md:text-3xl text-very-dark-blue mb-4 font-medium">
+											Intelligent search
+										</h3>
+										<p class="mb-8 leading-relaxed text-grayish-blue">
 											Our powerful search feature will help you find saved sites
 											in no time at all. No need to trawl through all of your
 											bookmarks.
 										</p>
-										<button class="btn btn-primary">More Info</button>
+										<button
+											class="inline-block py-3 px-6 border-2 border-soft-blue rounded-base text-base font-medium cursor-pointer transition-all duration-fast no-underline bg-soft-blue text-white hover:bg-white hover:text-very-dark-blue hover:border-very-dark-blue hover:shadow-none focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2">
+											More Info
+										</button>
 									</div>
 								</div>
 							</div>
 
 							<div
-								class="tab-pane"
-								id="content3"
+								data-panel="tab3"
+								class="hidden"
+								id="panel3"
 								role="tabpanel"
 								aria-labelledby="tab3">
-								<div class="feature-content">
-									<div class="feature-image">
+								<div
+									class="flex flex-col lg:flex-row lg:items-center text-center lg:text-left gap-12 lg:gap-24">
+									<div class="flex-1 relative lg:min-w-0 feature-image-bg">
 										<img
 											src="images/illustration-features-tab-3.svg"
-											alt="Illustration showing bookmark sharing functionality with shareable link generation" />
+											alt="Illustration showing bookmark sharing functionality with shareable link generation"
+											class="block max-w-full h-auto" />
 									</div>
-									<div class="feature-text">
-										<h3>Share your bookmarks</h3>
-										<p>
+									<div class="flex-1">
+										<h3
+											class="text-2xl md:text-3xl text-very-dark-blue mb-4 font-medium">
+											Share your bookmarks
+										</h3>
+										<p class="mb-8 leading-relaxed text-grayish-blue">
 											Easily share your bookmarks and collections with others.
 											Create a shareable link that you can send at the click of
 											a button.
 										</p>
-										<button class="btn btn-primary">More Info</button>
+										<button
+											class="inline-block py-3 px-6 border-2 border-soft-blue rounded-base text-base font-medium cursor-pointer transition-all duration-fast no-underline bg-soft-blue text-white hover:bg-white hover:text-very-dark-blue hover:border-very-dark-blue hover:shadow-none focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2">
+											More Info
+										</button>
 									</div>
 								</div>
 							</div>
