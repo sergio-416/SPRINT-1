@@ -141,11 +141,13 @@
 							</div>
 						</div>
 
-						<div class="flex-1 relative hero-image-bg">
+						<div class="flex-1 relative">
+							<div
+								class="absolute right-[-45%] top-[25%] w-[120%] h-[80%] bg-soft-blue rounded-l-[300px] -z-10 lg:right-[-35%] lg:top-[20%] lg:w-[110%] lg:h-[85%]"></div>
 							<img
 								src="images/illustration-hero.svg"
 								alt="Illustration of the Bookmark Manager dashboard interface showing organized bookmarks"
-								class="block max-w-full h-auto" />
+								class="block max-w-full h-auto relative z-10" />
 						</div>
 					</div>
 				</div>
@@ -178,6 +180,8 @@
 								aria-selected="true"
 								aria-controls="panel1">
 								Simple Bookmarking
+								<span
+									class="absolute bottom-0 left-0 right-0 h-1 bg-soft-red opacity-0"></span>
 							</button>
 							<button
 								type="button"
@@ -187,6 +191,8 @@
 								aria-selected="false"
 								aria-controls="panel2">
 								Speedy Searching
+								<span
+									class="absolute bottom-0 left-0 right-0 h-1 bg-soft-red opacity-0"></span>
 							</button>
 							<button
 								type="button"
@@ -196,6 +202,8 @@
 								aria-selected="false"
 								aria-controls="panel3">
 								Easy Sharing
+								<span
+									class="absolute bottom-0 left-0 right-0 h-1 bg-soft-red opacity-0"></span>
 							</button>
 						</div>
 
@@ -208,11 +216,13 @@
 								aria-labelledby="tab1">
 								<div
 									class="flex flex-col lg:flex-row lg:items-center text-center lg:text-left gap-12 lg:gap-24">
-									<div class="flex-1 relative lg:min-w-0 feature-image-bg">
+									<div class="flex-1 relative lg:min-w-0">
+										<div
+											class="absolute left-[-80%] top-[20%] w-[150%] h-[80%] bg-soft-blue rounded-r-[300px] -z-10"></div>
 										<img
 											src="images/illustration-features-tab-1.svg"
 											alt="Illustration showing the simple bookmarking interface with drag and drop functionality"
-											class="block max-w-full h-auto" />
+											class="block max-w-full h-auto relative z-10" />
 									</div>
 									<div class="flex-1">
 										<h3
@@ -240,11 +250,13 @@
 								aria-labelledby="tab2">
 								<div
 									class="flex flex-col lg:flex-row lg:items-center text-center lg:text-left gap-12 lg:gap-24">
-									<div class="flex-1 relative lg:min-w-0 feature-image-bg">
+									<div class="flex-1 relative lg:min-w-0">
+										<div
+											class="absolute left-[-80%] top-[20%] w-[150%] h-[80%] bg-soft-blue rounded-r-[300px] -z-10"></div>
 										<img
 											src="images/illustration-features-tab-2.svg"
 											alt="Illustration demonstrating the intelligent search feature with search bar and results"
-											class="block max-w-full h-auto" />
+											class="block max-w-full h-auto relative z-10" />
 									</div>
 									<div class="flex-1">
 										<h3
@@ -272,11 +284,13 @@
 								aria-labelledby="tab3">
 								<div
 									class="flex flex-col lg:flex-row lg:items-center text-center lg:text-left gap-12 lg:gap-24">
-									<div class="flex-1 relative lg:min-w-0 feature-image-bg">
+									<div class="flex-1 relative lg:min-w-0">
+										<div
+											class="absolute left-[-80%] top-[20%] w-[150%] h-[80%] bg-soft-blue rounded-r-[300px] -z-10"></div>
 										<img
 											src="images/illustration-features-tab-3.svg"
 											alt="Illustration showing bookmark sharing functionality with shareable link generation"
-											class="block max-w-full h-auto" />
+											class="block max-w-full h-auto relative z-10" />
 									</div>
 									<div class="flex-1">
 										<h3
@@ -408,62 +422,74 @@
 					</div>
 
 					<div class="max-w-[540px] mx-auto mb-12">
-						<details class="faq-item">
-							<summary>
+						<details
+							class="border-b border-grayish-blue/20 py-5 cursor-pointer group">
+							<summary
+								class="flex justify-between items-center text-very-dark-blue text-base md:text-lg list-none cursor-pointer transition-colors duration-fast hover:text-soft-red">
 								What is Bookmark?
 								<img
 									src="images/icon-arrow.svg"
 									alt=""
-									class="arrow w-[18px] h-[11px]"
+									class="w-[18px] h-[11px] transition-all duration-300 group-open:rotate-180 group-open:brightness-0 group-open:invert-[43%] group-open:sepia-[96%] group-open:saturate-[1600%] group-open:hue-rotate-[330deg]"
 									aria-hidden="true" />
 							</summary>
-							<p>
+							<p
+								class="mt-5 text-grayish-blue leading-relaxed text-sm md:text-base">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
 								tincidunt justo eget ultricies fringilla. Phasellus blandit
 								ipsum quis quam ornare mattis.
 							</p>
 						</details>
 
-						<details class="faq-item">
-							<summary>
+						<details
+							class="border-b border-grayish-blue/20 py-5 cursor-pointer group">
+							<summary
+								class="flex justify-between items-center text-very-dark-blue text-base md:text-lg list-none cursor-pointer transition-colors duration-fast hover:text-soft-red">
 								How can I request a new browser?
 								<img
 									src="images/icon-arrow.svg"
 									alt=""
-									class="arrow w-[18px] h-[11px]"
+									class="w-[18px] h-[11px] transition-all duration-300 group-open:rotate-180 group-open:brightness-0 group-open:invert-[43%] group-open:sepia-[96%] group-open:saturate-[1600%] group-open:hue-rotate-[330deg]"
 									aria-hidden="true" />
 							</summary>
-							<p>
+							<p
+								class="mt-5 text-grayish-blue leading-relaxed text-sm md:text-base">
 								Vivamus luctus eros aliquet convallis ultricies. Mauris augue
 								massa, ultricies non ligula. Suspendisse imperdiet.
 							</p>
 						</details>
 
-						<details class="faq-item">
-							<summary>
+						<details
+							class="border-b border-grayish-blue/20 py-5 cursor-pointer group">
+							<summary
+								class="flex justify-between items-center text-very-dark-blue text-base md:text-lg list-none cursor-pointer transition-colors duration-fast hover:text-soft-red">
 								Is there a mobile app?
 								<img
 									src="images/icon-arrow.svg"
 									alt=""
-									class="arrow w-[18px] h-[11px]"
+									class="w-[18px] h-[11px] transition-all duration-300 group-open:rotate-180 group-open:brightness-0 group-open:invert-[43%] group-open:sepia-[96%] group-open:saturate-[1600%] group-open:hue-rotate-[330deg]"
 									aria-hidden="true" />
 							</summary>
-							<p>
+							<p
+								class="mt-5 text-grayish-blue leading-relaxed text-sm md:text-base">
 								Sed consectetur quam id neque fermentum accumsan. Praesent
 								luctus vestibulum dolor, ut condimentum urna vulputate eget.
 							</p>
 						</details>
 
-						<details class="faq-item">
-							<summary>
+						<details
+							class="border-b border-grayish-blue/20 py-5 cursor-pointer group">
+							<summary
+								class="flex justify-between items-center text-very-dark-blue text-base md:text-lg list-none cursor-pointer transition-colors duration-fast hover:text-soft-red">
 								What about other Chromium browsers?
 								<img
 									src="images/icon-arrow.svg"
 									alt=""
-									class="arrow w-[18px] h-[11px]"
+									class="w-[18px] h-[11px] transition-all duration-300 group-open:rotate-180 group-open:brightness-0 group-open:invert-[43%] group-open:sepia-[96%] group-open:saturate-[1600%] group-open:hue-rotate-[330deg]"
 									aria-hidden="true" />
 							</summary>
-							<p>
+							<p
+								class="mt-5 text-grayish-blue leading-relaxed text-sm md:text-base">
 								Integer condimentum ipsum id imperdiet finibus. Vivamus in
 								placerat mi, at euismod dui. Aliquam vitae neque eget nisl
 								gravida pellentesque non ut velit.
@@ -571,7 +597,7 @@
 						<a
 							href="#"
 							aria-label="Visit our Facebook page"
-							class="transition-all duration-fast hover:brightness-0 hover:saturate-100 hover:invert-[43%] hover:sepia-[96%] hover:saturate-[1600%] hover:hue-rotate-[330deg] focus:outline-2 focus:outline-soft-red focus:outline-offset-4">
+							class="transition-all duration-fast hover:brightness-0 hover:invert-[43%] hover:sepia-[96%] hover:saturate-[1600%] hover:hue-rotate-[330deg] focus:outline-2 focus:outline-soft-red focus:outline-offset-4">
 							<img
 								src="images/icon-facebook.svg"
 								alt=""
@@ -582,7 +608,7 @@
 						<a
 							href="#"
 							aria-label="Visit our Twitter page"
-							class="transition-all duration-fast hover:brightness-0 hover:saturate-100 hover:invert-[43%] hover:sepia-[96%] hover:saturate-[1600%] hover:hue-rotate-[330deg] focus:outline-2 focus:outline-soft-red focus:outline-offset-4">
+							class="transition-all duration-fast hover:brightness-0 hover:invert-[43%] hover:sepia-[96%] hover:saturate-[1600%] hover:hue-rotate-[330deg] focus:outline-2 focus:outline-soft-red focus:outline-offset-4">
 							<img
 								src="images/icon-twitter.svg"
 								alt=""
