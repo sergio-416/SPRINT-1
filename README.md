@@ -30,6 +30,34 @@ This project was originally built with vanilla CSS and later migrated to **Tailw
 
 The result is a highly maintainable, performant codebase that adheres to modern CSS architecture principles.
 
+## Project Evolution
+
+This project was originally built with vanilla CSS and later migrated to **Tailwind CSS** to achieve maximum utility-first purism. The migration involved:
+
+- Converting all custom CSS classes to Tailwind utilities
+- Replacing pseudo-elements with real DOM elements
+- Implementing utility-class manipulation via JavaScript
+- Minimizing custom CSS to only essential browser hacks and accessibility utilities
+
+The result is a highly maintainable, performant codebase that adheres to modern CSS architecture principles.
+
+### From Pure CSS to JavaScript-Enhanced
+
+The original implementation relied heavily on CSS pseudo-selectors (`:checked`, `:target`) and pseudo-elements to achieve interactivity without JavaScript. While this approach minimized dependencies, it had limitations:
+
+- **Limited state management** - CSS alone couldn't handle complex UI states
+- **Accessibility challenges** - Proper ARIA attributes require dynamic updates
+- **Maintainability issues** - CSS hacks became increasingly complex
+
+The current implementation uses **modular JavaScript** to:
+
+- Dynamically toggle Tailwind utility classes based on user interaction
+- Update ARIA attributes for better screen reader support
+- Manage component state explicitly and predictably
+- Improve code readability and maintainability
+
+This architectural shift aligns with modern web development best practices while maintaining the project's performance and user experience.
+
 ## Installation
 
 ```bash
