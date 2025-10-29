@@ -10,109 +10,101 @@
 			type="image/png"
 			sizes="32x32"
 			href="images/favicon-32x32.png" />
-		<link rel="stylesheet" href="dist/output.css" />
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<header class="relative py-md bg-white z-[1000]">
+		<header class="relative py-8 bg-white z-[1000]">
 			<nav class="relative" aria-label="Main navigation">
-				<div class="flex justify-between items-center px-sm">
-					<input
-						type="checkbox"
-						id="nav-toggle"
-						class="nav-toggle-checkbox hidden desktop:hidden order-0"
-						aria-controls="main-menu"
-						aria-expanded="false" />
-					<div class="logo-container relative z-[1001] order-1 desktop:order-0">
+				<div class="flex justify-between items-center px-5">
+					<div class="relative z-[1001] w-[148px] h-[25px]">
 						<img
+							id="logo-default"
 							src="images/logo-bookmark.svg"
 							alt="Bookmark logo"
-							class="logo block" />
+							class="absolute top-0 left-0 w-full h-full" />
 						<img
+							id="logo-mobile-active"
 							src="images/logo-mobile-active.svg"
 							alt="Bookmark logo"
-							class="logo hidden" />
+							class="hidden absolute top-0 left-0 w-full h-full" />
 					</div>
-					<label
-						for="nav-toggle"
-						class="bg-transparent border-none cursor-pointer z-[1001] block order-2 desktop:hidden"
-						aria-label="Toggle navigation menu">
+
+					<button
+						id="menu-toggle"
+						class="bg-transparent border-none cursor-pointer z-[1001] block lg:hidden"
+						aria-label="Toggle navigation menu"
+						aria-expanded="false"
+						aria-controls="mobile-menu">
 						<img
+							id="hamburger-icon"
 							src="images/icon-hamburger.svg"
 							alt=""
-							class="block"
 							aria-hidden="true" />
 						<img
+							id="close-icon"
 							src="images/icon-close.svg"
 							alt=""
 							class="hidden"
 							aria-hidden="true" />
-					</label>
+					</button>
+
 					<ul
-						class="hidden fixed inset-0 bg-very-dark-blue/95 flex-col items-center justify-center list-none z-[999] p-0 overflow-y-auto desktop:!flex desktop:static desktop:flex-row desktop:bg-transparent desktop:gap-lg desktop:order-1"
-						id="main-menu"
+						id="mobile-menu"
+						class="hidden fixed top-0 left-0 right-0 bottom-0 bg-[rgba(37,43,70,0.95)] flex-col items-center justify-center list-none z-[999] p-0 overflow-y-auto lg:flex lg:static lg:flex-row lg:bg-transparent lg:items-center lg:gap-10"
 						role="menu">
 						<li
-							role="none"
-							class="m-0 w-[85%] max-w-[350px] text-center border-t border-white/20 py-[25px] first:border-t-0 desktop:m-0 desktop:w-auto desktop:border-none desktop:p-0">
+							class="m-0 w-[85%] max-w-[350px] text-center border-t border-white/20 py-6 first:border-t-0 lg:w-auto lg:border-0 lg:p-0">
 							<a
 								href="#features"
-								role="menuitem"
-								class="text-white no-underline uppercase tracking-[2px] text-lg block text-center focus:outline-2 focus:outline-soft-red focus:outline-offset-4 desktop:text-very-dark-blue desktop:text-[13px] desktop:tracking-[1.5px] desktop:transition-colors desktop:duration-base desktop:hover:text-soft-red"
+								class="text-white no-underline uppercase tracking-[2px] text-lg block text-center transition-colors duration-fast hover:text-soft-red focus:outline-2 focus:outline-soft-red focus:outline-offset-[4px] lg:text-very-dark-blue lg:text-sm lg:tracking-[1.5px]"
 								>Features</a
 							>
 						</li>
 						<li
-							role="none"
-							class="m-0 w-[85%] max-w-[350px] text-center border-t border-white/20 py-[25px] first:border-t-0 desktop:m-0 desktop:w-auto desktop:border-none desktop:p-0">
+							class="m-0 w-[85%] max-w-[350px] text-center border-t border-white/20 py-6 first:border-t-0 lg:w-auto lg:border-0 lg:p-0">
 							<a
 								href="#pricing"
-								role="menuitem"
-								class="text-white no-underline uppercase tracking-[2px] text-lg block text-center focus:outline-2 focus:outline-soft-red focus:outline-offset-4 desktop:text-very-dark-blue desktop:text-[13px] desktop:tracking-[1.5px] desktop:transition-colors desktop:duration-base desktop:hover:text-soft-red"
+								class="text-white no-underline uppercase tracking-[2px] text-lg block text-center transition-colors duration-fast hover:text-soft-red focus:outline-2 focus:outline-soft-red focus:outline-offset-[4px] lg:text-very-dark-blue lg:text-sm lg:tracking-[1.5px]"
 								>Pricing</a
 							>
 						</li>
 						<li
-							role="none"
-							class="m-0 w-[85%] max-w-[350px] text-center border-t border-white/20 py-[25px] first:border-t-0 desktop:m-0 desktop:w-auto desktop:border-none desktop:p-0">
+							class="m-0 w-[85%] max-w-[350px] text-center border-t border-white/20 py-6 first:border-t-0 lg:w-auto lg:border-0 lg:p-0">
 							<a
 								href="#contact"
-								role="menuitem"
-								class="text-white no-underline uppercase tracking-[2px] text-lg block text-center focus:outline-2 focus:outline-soft-red focus:outline-offset-4 desktop:text-very-dark-blue desktop:text-[13px] desktop:tracking-[1.5px] desktop:transition-colors desktop:duration-base desktop:hover:text-soft-red"
+								class="text-white no-underline uppercase tracking-[2px] text-lg block text-center transition-colors duration-fast hover:text-soft-red focus:outline-2 focus:outline-soft-red focus:outline-offset-[4px] lg:text-very-dark-blue lg:text-sm lg:tracking-[1.5px]"
 								>Contact</a
 							>
 						</li>
 						<li
-							role="none"
-							class="m-0 w-[85%] max-w-[350px] text-center border-t border-white/20 py-[25px] desktop:m-0 desktop:w-auto desktop:border-none desktop:p-0">
+							class="m-0 w-[85%] max-w-[350px] text-center border-t border-white/20 py-6 first:border-t-0 lg:w-auto lg:border-0 lg:p-0">
 							<a
 								href="#"
-								role="menuitem"
-								class="inline-block py-[14px] px-[40px] rounded-sm m-0 border-2 border-white bg-transparent text-white text-center tracking-[2px] w-auto uppercase text-lg no-underline hover:bg-transparent hover:border-soft-red hover:text-soft-red focus:outline-2 focus:outline-soft-red focus:outline-offset-4 desktop:bg-soft-red desktop:text-white desktop:border-soft-red desktop:mt-0 desktop:py-[10px] desktop:px-[35px] desktop:text-[13px]"
+								class="inline-block py-4 px-10 rounded-base border-2 border-white bg-transparent text-white text-center box-border tracking-[2px] w-auto uppercase text-lg transition-all duration-fast hover:border-soft-red hover:text-soft-red focus:outline-2 focus:outline-soft-red focus:outline-offset-[4px] lg:bg-soft-red lg:border-soft-red lg:mt-0 lg:py-2 lg:px-9 lg:text-sm lg:hover:bg-white lg:hover:text-soft-red lg:hover:border-soft-red"
 								>Login</a
 							>
 						</li>
 						<li
-							role="none"
-							class="border-t-0 pt-lg flex gap-lg justify-center items-center desktop:hidden">
+							class="border-t-0 pt-10 flex gap-10 justify-center items-center lg:hidden">
 							<a
 								href="#"
 								aria-label="Visit our Facebook page"
-								class="inline-block p-0 m-0 focus:outline-2 focus:outline-soft-red focus:outline-offset-4 focus:rounded-sm">
+								class="inline-block p-0 m-0 focus:outline-2 focus:outline-soft-red focus:outline-offset-[4px] focus:rounded-sm">
 								<img
 									src="images/icon-facebook.svg"
 									alt=""
 									aria-hidden="true"
-									class="w-6 h-6 transition-opacity duration-300" />
+									class="w-6 h-6 transition-opacity duration-fast" />
 							</a>
 							<a
 								href="#"
 								aria-label="Visit our Twitter page"
-								class="inline-block p-0 m-0 focus:outline-2 focus:outline-soft-red focus:outline-offset-4 focus:rounded-sm">
+								class="inline-block p-0 m-0 focus:outline-2 focus:outline-soft-red focus:outline-offset-[4px] focus:rounded-sm">
 								<img
 									src="images/icon-twitter.svg"
 									alt=""
 									aria-hidden="true"
-									class="w-6 h-6 transition-opacity duration-300" />
+									class="w-6 h-6 transition-opacity duration-fast" />
 							</a>
 						</li>
 					</ul>
@@ -121,175 +113,199 @@
 		</header>
 
 		<main>
-			<section class="py-md desktop:py-3xl">
-				<div class="container">
+			<section class="py-8 pb-20 lg:py-0 lg:pb-20">
+				<div class="w-[90%] max-w-[1110px] mx-auto px-5">
 					<div
-						class="flex flex-col-reverse gap-xl text-center desktop:flex-row desktop:items-center desktop:text-left">
-						<div class="desktop:flex-1">
-							<h1>A Simple Bookmark Manager</h1>
-							<p class="mb-md leading-base">
+						class="flex flex-col-reverse lg:flex-row gap-12 lg:gap-0 text-center lg:text-left lg:items-center">
+						<div class="flex-1">
+							<h1
+								class="text-2xl md:text-3xl lg:text-4xl text-very-dark-blue mb-5 font-medium">
+								A Simple Bookmark Manager
+							</h1>
+							<p class="mb-8 leading-normal">
 								A clean and simple interface to organize your favorite websites.
 								Open a new browser tab and see your sites load instantly. Try it
 								for free.
 							</p>
-							<div
-								class="flex gap-[15px] justify-center flex-wrap tablet:justify-start">
-								<button class="btn btn-chrome">Get it on Chrome</button>
-								<button class="btn btn-firefox">Get it on Firefox</button>
+							<div class="flex gap-4 justify-center lg:justify-start flex-wrap">
+								<a
+									href="#"
+									class="inline-block py-3 px-6 border-2 border-transparent rounded-base text-base font-medium cursor-pointer transition-all duration-fast no-underline bg-soft-blue text-white shadow-soft hover:bg-white hover:text-soft-blue hover:border-soft-blue hover:shadow-none focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2">
+									Get it on Chrome
+								</a>
+								<a
+									href="#"
+									class="inline-block py-3 px-6 border-2 border-transparent rounded-base text-base font-medium cursor-pointer transition-all duration-fast no-underline bg-light-gray text-very-dark-blue shadow-gray hover:bg-white hover:text-very-dark-blue hover:border-very-dark-blue hover:shadow-none focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2">
+									Get it on Firefox
+								</a>
 							</div>
 						</div>
-						<div class="hero-image-decorator relative desktop:flex-1">
+
+						<div class="flex-1 relative">
+							<div
+								class="absolute right-[-45%] top-[25%] w-[120%] h-[80%] bg-soft-blue rounded-l-[300px] -z-10 lg:right-[-35%] lg:top-[20%] lg:w-[110%] lg:h-[85%]"></div>
 							<img
 								src="images/illustration-hero.svg"
 								alt="Illustration of the Bookmark Manager dashboard interface showing organized bookmarks"
-								class="w-full h-auto max-w-[500px] mx-auto block" />
+								class="block max-w-full h-auto relative z-10" />
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section
-				class="py-3xl overflow-hidden desktop:overflow-visible"
-				id="features">
-				<div class="container">
-					<div class="text-center mb-xl">
-						<h2>Features</h2>
-						<p>
+			<section class="py-0 pb-20 lg:overflow-visible" id="features">
+				<div class="w-[90%] max-w-[1110px] mx-auto px-5">
+					<div class="text-center max-w-[540px] mx-auto mb-10">
+						<h2
+							class="text-2xl md:text-3xl text-very-dark-blue mb-4 font-medium">
+							Features
+						</h2>
+						<p class="leading-relaxed text-grayish-blue">
 							Our aim is to make it quick and easy for you to access your
 							favorite websites. Your bookmarks sync between your devices so you
 							can access them on the go.
 						</p>
 					</div>
 
-					<div class="tabs">
-						<input
-							type="radio"
-							name="feature-tab"
-							id="tab1"
-							class="hidden"
-							checked
-							aria-controls="content1" />
-						<input
-							type="radio"
-							name="feature-tab"
-							id="tab2"
-							class="hidden"
-							aria-controls="content2" />
-						<input
-							type="radio"
-							name="feature-tab"
-							id="tab3"
-							class="hidden"
-							aria-controls="content3" />
-
+					<div class="mb-16">
 						<div
-							class="tab-buttons flex flex-col mb-2xl tablet:flex-row tablet:justify-center tablet:border-b tablet:border-grayish-blue/20"
+							class="flex flex-col lg:flex-row lg:justify-center lg:border-b lg:border-gray-300/20"
 							role="tablist"
 							aria-label="Feature categories">
-							<label
-								for="tab1"
-								class="tab-btn"
+							<button
+								type="button"
+								data-tab="tab1"
+								class="tab-btn border-b border-gray-300/20 lg:border-b-0 py-5 px-10 lg:flex-1 lg:max-w-[243px] text-grayish-blue text-base text-center cursor-pointer transition-colors duration-fast relative hover:text-soft-red focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2 last:border-b-0 lg:last:border-b"
 								role="tab"
 								aria-selected="true"
-								aria-controls="content1"
-								tabindex="0"
-								>Simple Bookmarking</label
-							>
-							<label
-								for="tab2"
-								class="tab-btn"
+								aria-controls="panel1">
+								Simple Bookmarking
+								<span
+									class="absolute bottom-0 left-0 right-0 h-1 bg-soft-red opacity-0"></span>
+							</button>
+							<button
+								type="button"
+								data-tab="tab2"
+								class="tab-btn border-b border-gray-300/20 lg:border-b-0 py-5 px-10 lg:flex-1 lg:max-w-[243px] text-grayish-blue text-base text-center cursor-pointer transition-colors duration-fast relative hover:text-soft-red focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2 last:border-b-0 lg:last:border-b"
 								role="tab"
 								aria-selected="false"
-								aria-controls="content2"
-								tabindex="-1"
-								>Speedy Searching</label
-							>
-							<label
-								for="tab3"
-								class="tab-btn"
+								aria-controls="panel2">
+								Speedy Searching
+								<span
+									class="absolute bottom-0 left-0 right-0 h-1 bg-soft-red opacity-0"></span>
+							</button>
+							<button
+								type="button"
+								data-tab="tab3"
+								class="tab-btn border-b border-gray-300/20 lg:border-b-0 py-5 px-10 lg:flex-1 lg:max-w-[243px] text-grayish-blue text-base text-center cursor-pointer transition-colors duration-fast relative hover:text-soft-red focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2 last:border-b-0 lg:last:border-b"
 								role="tab"
 								aria-selected="false"
-								aria-controls="content3"
-								tabindex="-1"
-								>Easy Sharing</label
-							>
+								aria-controls="panel3">
+								Easy Sharing
+								<span
+									class="absolute bottom-0 left-0 right-0 h-1 bg-soft-red opacity-0"></span>
+							</button>
 						</div>
 
-						<div class="tab-content desktop:overflow-visible">
+						<div class="mt-16 lg:overflow-visible">
 							<div
-								class="tab-pane"
-								id="content1"
+								data-panel="tab1"
+								class="hidden"
+								id="panel1"
 								role="tabpanel"
 								aria-labelledby="tab1">
 								<div
-									class="flex flex-col gap-2xl text-center desktop:flex-row desktop:items-center desktop:text-left desktop:gap-[100px]">
-									<div
-										class="feature-image relative desktop:flex-1 desktop:min-w-0">
+									class="flex flex-col lg:flex-row lg:items-center text-center lg:text-left gap-12 lg:gap-24">
+									<div class="flex-1 relative lg:min-w-0">
+										<div
+											class="absolute left-[-80%] top-[20%] w-[150%] h-[80%] bg-soft-blue rounded-r-[300px] -z-10"></div>
 										<img
 											src="images/illustration-features-tab-1.svg"
 											alt="Illustration showing the simple bookmarking interface with drag and drop functionality"
-											class="w-full max-w-[400px] mx-auto block" />
+											class="block max-w-full h-auto relative z-10" />
 									</div>
-									<div class="feature-text desktop:flex-1">
-										<h3>Bookmark in one click</h3>
-										<p class="mb-[35px]">
+									<div class="flex-1">
+										<h3
+											class="text-2xl md:text-3xl text-very-dark-blue mb-4 font-medium">
+											Bookmark in one click
+										</h3>
+										<p class="mb-8 leading-relaxed text-grayish-blue">
 											Organize your bookmarks however you like. Our simple
 											drag-and-drop interface gives you complete control over
 											how you manage your favorite sites.
 										</p>
-										<button class="btn btn-primary">More Info</button>
+										<button
+											class="inline-block py-3 px-6 border-2 border-soft-blue rounded-base text-base font-medium cursor-pointer transition-all duration-fast no-underline bg-soft-blue text-white hover:bg-white hover:text-very-dark-blue hover:border-very-dark-blue hover:shadow-none focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2">
+											More Info
+										</button>
 									</div>
 								</div>
 							</div>
 
 							<div
-								class="tab-pane"
-								id="content2"
+								data-panel="tab2"
+								class="hidden"
+								id="panel2"
 								role="tabpanel"
 								aria-labelledby="tab2">
 								<div
-									class="flex flex-col gap-2xl text-center desktop:flex-row desktop:items-center desktop:text-left desktop:gap-[100px]">
-									<div
-										class="feature-image relative desktop:flex-1 desktop:min-w-0">
+									class="flex flex-col lg:flex-row lg:items-center text-center lg:text-left gap-12 lg:gap-24">
+									<div class="flex-1 relative lg:min-w-0">
+										<div
+											class="absolute left-[-80%] top-[20%] w-[150%] h-[80%] bg-soft-blue rounded-r-[300px] -z-10"></div>
 										<img
 											src="images/illustration-features-tab-2.svg"
 											alt="Illustration demonstrating the intelligent search feature with search bar and results"
-											class="w-full max-w-[400px] mx-auto block" />
+											class="block max-w-full h-auto relative z-10" />
 									</div>
-									<div class="feature-text desktop:flex-1">
-										<h3>Intelligent search</h3>
-										<p class="mb-[35px]">
+									<div class="flex-1">
+										<h3
+											class="text-2xl md:text-3xl text-very-dark-blue mb-4 font-medium">
+											Intelligent search
+										</h3>
+										<p class="mb-8 leading-relaxed text-grayish-blue">
 											Our powerful search feature will help you find saved sites
 											in no time at all. No need to trawl through all of your
 											bookmarks.
 										</p>
-										<button class="btn btn-primary">More Info</button>
+										<button
+											class="inline-block py-3 px-6 border-2 border-soft-blue rounded-base text-base font-medium cursor-pointer transition-all duration-fast no-underline bg-soft-blue text-white hover:bg-white hover:text-very-dark-blue hover:border-very-dark-blue hover:shadow-none focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2">
+											More Info
+										</button>
 									</div>
 								</div>
 							</div>
 
 							<div
-								class="tab-pane"
-								id="content3"
+								data-panel="tab3"
+								class="hidden"
+								id="panel3"
 								role="tabpanel"
 								aria-labelledby="tab3">
 								<div
-									class="flex flex-col gap-2xl text-center desktop:flex-row desktop:items-center desktop:text-left desktop:gap-[100px]">
-									<div
-										class="feature-image relative desktop:flex-1 desktop:min-w-0">
+									class="flex flex-col lg:flex-row lg:items-center text-center lg:text-left gap-12 lg:gap-24">
+									<div class="flex-1 relative lg:min-w-0">
+										<div
+											class="absolute left-[-80%] top-[20%] w-[150%] h-[80%] bg-soft-blue rounded-r-[300px] -z-10"></div>
 										<img
 											src="images/illustration-features-tab-3.svg"
 											alt="Illustration showing bookmark sharing functionality with shareable link generation"
-											class="w-full max-w-[400px] mx-auto block" />
+											class="block max-w-full h-auto relative z-10" />
 									</div>
-									<div class="feature-text desktop:flex-1">
-										<h3>Share your bookmarks</h3>
-										<p class="mb-[35px]">
+									<div class="flex-1">
+										<h3
+											class="text-2xl md:text-3xl text-very-dark-blue mb-4 font-medium">
+											Share your bookmarks
+										</h3>
+										<p class="mb-8 leading-relaxed text-grayish-blue">
 											Easily share your bookmarks and collections with others.
 											Create a shareable link that you can send at the click of
 											a button.
 										</p>
-										<button class="btn btn-primary">More Info</button>
+										<button
+											class="inline-block py-3 px-6 border-2 border-soft-blue rounded-base text-base font-medium cursor-pointer transition-all duration-fast no-underline bg-soft-blue text-white hover:bg-white hover:text-very-dark-blue hover:border-very-dark-blue hover:shadow-none focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2">
+											More Info
+										</button>
 									</div>
 								</div>
 							</div>
@@ -298,99 +314,127 @@
 				</div>
 			</section>
 
-			<section class="download py-3xl">
-				<div class="container">
-					<div class="text-center mb-xl">
-						<h2>Download the extension</h2>
-						<p>
+			<section class="py-16 bg-white">
+				<div class="w-[90%] max-w-[1110px] mx-auto px-5">
+					<div class="text-center max-w-[540px] mx-auto mb-12">
+						<h2
+							class="text-2xl md:text-3xl text-very-dark-blue mb-4 font-medium">
+							Download the extension
+						</h2>
+						<p class="leading-relaxed text-grayish-blue">
 							We've got more browsers in the pipeline. Please do let us know if
 							you've got a favorite you'd like us to prioritize.
 						</p>
 					</div>
 
 					<div
-						class="flex flex-col gap-lg items-center tablet:flex-row tablet:flex-wrap tablet:justify-center desktop:items-start">
+						class="flex flex-col md:flex-row md:flex-wrap md:justify-center lg:items-start gap-10 max-w-[920px] mx-auto">
 						<article
-							class="browser-card bg-white rounded-md shadow-[0_10px_20px_-5px_rgba(73,93,207,0.2)] py-lg px-md text-center w-full max-w-[280px]">
-							<img
-								src="images/logo-chrome.svg"
-								alt="Chrome browser logo"
-								class="mb-md mx-auto" />
-							<h3 class="text-[20px] text-very-dark-blue mb-xs font-medium">
-								Add to Chrome
-							</h3>
-							<p class="text-[15px] mb-md">Minimum version 62</p>
+							class="bg-white rounded-2xl shadow-soft p-0 text-center flex flex-col w-full md:w-[280px] lg:mt-0">
+							<div class="pt-12 pb-8 px-6">
+								<img
+									src="images/logo-chrome.svg"
+									alt="Chrome browser logo"
+									class="mx-auto mb-8 w-[102px] h-[100px]" />
+								<h3 class="text-xl text-very-dark-blue mb-2 font-medium">
+									Add to Chrome
+								</h3>
+								<p class="text-sm text-grayish-blue mb-8">Minimum version 62</p>
+							</div>
 							<img
 								src="images/bg-dots.svg"
 								alt=""
-								class="dots w-full mb-[25px]"
+								class="w-full h-1"
 								aria-hidden="true" />
-							<button class="btn btn-primary">Add & Install Extension</button>
+							<div class="p-6">
+								<button
+									class="w-full inline-block py-3 px-6 border-2 border-soft-blue rounded-base text-base font-medium cursor-pointer transition-all duration-fast no-underline bg-soft-blue text-white hover:bg-white hover:text-very-dark-blue hover:border-very-dark-blue hover:shadow-none focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2">
+									Add & Install Extension
+								</button>
+							</div>
 						</article>
 
 						<article
-							class="browser-card bg-white rounded-md shadow-[0_10px_20px_-5px_rgba(73,93,207,0.2)] py-lg px-md text-center w-full max-w-[280px]">
-							<img
-								src="images/logo-firefox.svg"
-								alt="Firefox browser logo"
-								class="mb-md mx-auto" />
-							<h3 class="text-[20px] text-very-dark-blue mb-xs font-medium">
-								Add to Firefox
-							</h3>
-							<p class="text-[15px] mb-md">Minimum version 55</p>
+							class="bg-white rounded-2xl shadow-soft p-0 text-center flex flex-col w-full md:w-[280px] lg:mt-10">
+							<div class="pt-12 pb-8 px-6">
+								<img
+									src="images/logo-firefox.svg"
+									alt="Firefox browser logo"
+									class="mx-auto mb-8 w-[102px] h-[100px]" />
+								<h3 class="text-xl text-very-dark-blue mb-2 font-medium">
+									Add to Firefox
+								</h3>
+								<p class="text-sm text-grayish-blue mb-8">Minimum version 55</p>
+							</div>
 							<img
 								src="images/bg-dots.svg"
 								alt=""
-								class="dots w-full mb-[25px]"
+								class="w-full h-1"
 								aria-hidden="true" />
-							<button class="btn btn-primary">Add & Install Extension</button>
+							<div class="p-6">
+								<button
+									class="w-full inline-block py-3 px-6 border-2 border-soft-blue rounded-base text-base font-medium cursor-pointer transition-all duration-fast no-underline bg-soft-blue text-white hover:bg-white hover:text-very-dark-blue hover:border-very-dark-blue hover:shadow-none focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2">
+									Add & Install Extension
+								</button>
+							</div>
 						</article>
 
 						<article
-							class="browser-card bg-white rounded-md shadow-[0_10px_20px_-5px_rgba(73,93,207,0.2)] py-lg px-md text-center w-full max-w-[280px]">
-							<img
-								src="images/logo-opera.svg"
-								alt="Opera browser logo"
-								class="mb-md mx-auto" />
-							<h3 class="text-[20px] text-very-dark-blue mb-xs font-medium">
-								Add to Opera
-							</h3>
-							<p class="text-[15px] mb-md">Minimum version 46</p>
+							class="bg-white rounded-2xl shadow-soft p-0 text-center flex flex-col w-full md:w-[280px] lg:mt-20">
+							<div class="pt-12 pb-8 px-6">
+								<img
+									src="images/logo-opera.svg"
+									alt="Opera browser logo"
+									class="mx-auto mb-8 w-[102px] h-[100px]" />
+								<h3 class="text-xl text-very-dark-blue mb-2 font-medium">
+									Add to Opera
+								</h3>
+								<p class="text-sm text-grayish-blue mb-8">Minimum version 46</p>
+							</div>
 							<img
 								src="images/bg-dots.svg"
 								alt=""
-								class="dots w-full mb-[25px]"
+								class="w-full h-1"
 								aria-hidden="true" />
-							<button class="btn btn-primary">Add & Install Extension</button>
+							<div class="p-6">
+								<button
+									class="w-full inline-block py-3 px-6 border-2 border-soft-blue rounded-base text-base font-medium cursor-pointer transition-all duration-fast no-underline bg-soft-blue text-white hover:bg-white hover:text-very-dark-blue hover:border-very-dark-blue hover:shadow-none focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2">
+									Add & Install Extension
+								</button>
+							</div>
 						</article>
 					</div>
 				</div>
 			</section>
+			>
 
-			<section class="faq py-3xl text-center">
-				<div class="container max-w-narrow mx-auto">
-					<div class="text-center mb-xl">
-						<h2>Frequently Asked Questions</h2>
-						<p>
+			<section class="py-16 bg-white">
+				<div class="w-[90%] max-w-[1110px] mx-auto px-5">
+					<div class="text-center max-w-[540px] mx-auto mb-12">
+						<h2
+							class="text-2xl md:text-3xl text-very-dark-blue mb-4 font-medium">
+							Frequently Asked Questions
+						</h2>
+						<p class="leading-relaxed text-grayish-blue">
 							Here are some of our FAQs. If you have any other questions you'd
 							like answered please feel free to email us.
 						</p>
 					</div>
 
-					<div class="max-w-narrow mx-auto mb-xl">
+					<div class="max-w-[540px] mx-auto mb-12">
 						<details
-							class="faq-item border-t border-grayish-blue/20 last:border-b"
-							aria-expanded="false">
+							class="border-b border-grayish-blue/20 py-5 cursor-pointer group">
 							<summary
-								class="py-sm cursor-pointer list-none flex justify-between items-center text-very-dark-blue text-base hover:text-soft-red focus:outline-2 focus:outline-soft-blue focus:outline-offset-2">
+								class="flex justify-between items-center text-very-dark-blue text-base md:text-lg list-none cursor-pointer transition-colors duration-fast hover:text-soft-red">
 								What is Bookmark?
 								<img
 									src="images/icon-arrow.svg"
 									alt=""
-									class="arrow transition-transform duration-300"
+									class="w-[18px] h-[11px] transition-all duration-300 group-open:rotate-180 group-open:brightness-0 group-open:invert-[43%] group-open:sepia-[96%] group-open:saturate-[1600%] group-open:hue-rotate-[330deg]"
 									aria-hidden="true" />
 							</summary>
-							<p class="pb-sm leading-[1.8] text-left">
+							<p
+								class="mt-5 text-grayish-blue leading-relaxed text-sm md:text-base">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
 								tincidunt justo eget ultricies fringilla. Phasellus blandit
 								ipsum quis quam ornare mattis.
@@ -398,54 +442,54 @@
 						</details>
 
 						<details
-							class="faq-item border-t border-grayish-blue/20 last:border-b"
-							aria-expanded="false">
+							class="border-b border-grayish-blue/20 py-5 cursor-pointer group">
 							<summary
-								class="py-sm cursor-pointer list-none flex justify-between items-center text-very-dark-blue text-base hover:text-soft-red focus:outline-2 focus:outline-soft-blue focus:outline-offset-2">
+								class="flex justify-between items-center text-very-dark-blue text-base md:text-lg list-none cursor-pointer transition-colors duration-fast hover:text-soft-red">
 								How can I request a new browser?
 								<img
 									src="images/icon-arrow.svg"
 									alt=""
-									class="arrow transition-transform duration-300"
+									class="w-[18px] h-[11px] transition-all duration-300 group-open:rotate-180 group-open:brightness-0 group-open:invert-[43%] group-open:sepia-[96%] group-open:saturate-[1600%] group-open:hue-rotate-[330deg]"
 									aria-hidden="true" />
 							</summary>
-							<p class="pb-sm leading-[1.8] text-left">
+							<p
+								class="mt-5 text-grayish-blue leading-relaxed text-sm md:text-base">
 								Vivamus luctus eros aliquet convallis ultricies. Mauris augue
 								massa, ultricies non ligula. Suspendisse imperdiet.
 							</p>
 						</details>
 
 						<details
-							class="faq-item border-t border-grayish-blue/20 last:border-b"
-							aria-expanded="false">
+							class="border-b border-grayish-blue/20 py-5 cursor-pointer group">
 							<summary
-								class="py-sm cursor-pointer list-none flex justify-between items-center text-very-dark-blue text-base hover:text-soft-red focus:outline-2 focus:outline-soft-blue focus:outline-offset-2">
+								class="flex justify-between items-center text-very-dark-blue text-base md:text-lg list-none cursor-pointer transition-colors duration-fast hover:text-soft-red">
 								Is there a mobile app?
 								<img
 									src="images/icon-arrow.svg"
 									alt=""
-									class="arrow transition-transform duration-300"
+									class="w-[18px] h-[11px] transition-all duration-300 group-open:rotate-180 group-open:brightness-0 group-open:invert-[43%] group-open:sepia-[96%] group-open:saturate-[1600%] group-open:hue-rotate-[330deg]"
 									aria-hidden="true" />
 							</summary>
-							<p class="pb-sm leading-[1.8] text-left">
+							<p
+								class="mt-5 text-grayish-blue leading-relaxed text-sm md:text-base">
 								Sed consectetur quam id neque fermentum accumsan. Praesent
 								luctus vestibulum dolor, ut condimentum urna vulputate eget.
 							</p>
 						</details>
 
 						<details
-							class="faq-item border-t border-grayish-blue/20 last:border-b"
-							aria-expanded="false">
+							class="border-b border-grayish-blue/20 py-5 cursor-pointer group">
 							<summary
-								class="py-sm cursor-pointer list-none flex justify-between items-center text-very-dark-blue text-base hover:text-soft-red focus:outline-2 focus:outline-soft-blue focus:outline-offset-2">
+								class="flex justify-between items-center text-very-dark-blue text-base md:text-lg list-none cursor-pointer transition-colors duration-fast hover:text-soft-red">
 								What about other Chromium browsers?
 								<img
 									src="images/icon-arrow.svg"
 									alt=""
-									class="arrow transition-transform duration-300"
+									class="w-[18px] h-[11px] transition-all duration-300 group-open:rotate-180 group-open:brightness-0 group-open:invert-[43%] group-open:sepia-[96%] group-open:saturate-[1600%] group-open:hue-rotate-[330deg]"
 									aria-hidden="true" />
 							</summary>
-							<p class="pb-sm leading-[1.8] text-left">
+							<p
+								class="mt-5 text-grayish-blue leading-relaxed text-sm md:text-base">
 								Integer condimentum ipsum id imperdiet finibus. Vivamus in
 								placerat mi, at euismod dui. Aliquam vitae neque eget nisl
 								gravida pellentesque non ut velit.
@@ -453,50 +497,57 @@
 						</details>
 					</div>
 
-					<button class="btn btn-primary inline-block mx-auto">
-						More Info
-					</button>
+					<div class="text-center">
+						<button
+							class="inline-block py-3 px-6 border-2 border-soft-blue rounded-base text-base font-medium cursor-pointer transition-all duration-fast no-underline bg-soft-blue text-white hover:bg-white hover:text-very-dark-blue hover:border-very-dark-blue hover:shadow-none focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2">
+							More Info
+						</button>
+					</div>
 				</div>
 			</section>
-			<section class="bg-soft-blue text-white py-2xl text-center" id="contact">
-				<div class="container">
-					<p class="text-[13px] tracking-[4px] uppercase mb-sm">
+
+			<section class="py-16 bg-soft-blue text-white text-center" id="contact">
+				<div class="w-[90%] max-w-[1110px] mx-auto px-5">
+					<p class="text-sm uppercase tracking-[5px] mb-8 font-medium">
 						35,000+ already joined
 					</p>
 					<h2
-						class="text-white text-[28px] mb-md font-medium max-w-[450px] mx-auto">
+						class="text-2xl md:text-3xl mb-8 font-medium max-w-[440px] mx-auto">
 						Stay up-to-date with what we're doing
 					</h2>
 
 					<form
-						class="flex flex-col gap-[15px] max-w-[450px] mx-auto desktop:flex-row desktop:justify-center desktop:items-start desktop:gap-[16px]"
+						id="newsletter-form"
+						class="flex flex-col lg:flex-row lg:justify-center lg:items-start gap-4 lg:gap-4 max-w-[480px] mx-auto"
 						novalidate>
-						<div
-							class="form-group relative mb-lg desktop:flex-1 desktop:max-w-[300px] desktop:mb-0">
-							<label for="email-input" class="sr-only">Email address</label>
+						<div class="relative flex-1 lg:max-w-[300px]">
+							<label for="email-input" class="visually-hidden"
+								>Email address</label
+							>
 							<input
 								type="email"
 								id="email-input"
 								placeholder="Enter your email address"
-								class="w-full py-[15px] px-5 border-2 border-transparent rounded-sm text-base text-very-dark-blue outline-none"
 								aria-invalid="false"
 								aria-describedby="email-error"
+								class="w-full py-3 px-5 rounded-base border-2 border-transparent text-very-dark-blue text-base transition-all duration-fast focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2 focus:border-soft-blue"
 								required />
 							<img
+								id="error-icon"
 								src="images/icon-error.svg"
 								alt=""
-								class="error-icon absolute right-[15px] top-1/2 -translate-y-1/2 hidden transition-all duration-300"
+								class="hidden absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5"
 								aria-hidden="true" />
 							<span
 								id="email-error"
-								class="error-message hidden absolute top-full left-0 right-0 bg-soft-red text-white text-[10px] py-[5px] px-3 rounded-b-sm italic text-left -mt-[2px] z-10 transition-all duration-300"
+								class="hidden absolute top-full left-0 right-0 bg-soft-red text-white text-xs italic py-1 px-3 rounded-b-base -mt-0.5 text-left"
 								role="alert">
 								Whoops, make sure it's an email
 							</span>
 						</div>
 						<button
 							type="submit"
-							class="btn btn-secondary w-fit mx-auto desktop:mx-0">
+							class="inline-block py-3 px-6 lg:px-8 border-2 border-soft-red rounded-base text-base font-medium cursor-pointer transition-all duration-fast no-underline bg-soft-red text-white hover:bg-white hover:text-soft-red hover:border-soft-red focus:outline-2 focus:outline-very-dark-blue focus:outline-offset-2 whitespace-nowrap">
 							Contact Us
 						</button>
 					</form>
@@ -504,44 +555,70 @@
 			</section>
 		</main>
 
-		<footer
-			class="bg-very-dark-blue py-lg px-sm relative z-10 w-full overflow-visible">
-			<div class="container max-w-full w-full p-0">
+		<footer class="bg-very-dark-blue py-8">
+			<div class="w-[90%] max-w-[1110px] mx-auto px-5">
 				<div
-					class="flex flex-col items-center gap-lg w-full px-sm desktop:grid desktop:grid-cols-[auto_1fr_auto] desktop:items-center">
-					<img
-						src="images/logo-bookmark-footer.svg"
-						alt="Bookmark logo"
-						class="block mx-auto mb-sm w-auto h-auto desktop:m-0" />
-					<nav
-						class="flex flex-col gap-[25px] text-center w-full my-sm desktop:flex-row desktop:justify-start desktop:gap-lg desktop:m-0"
-						aria-label="Footer navigation">
-						<a href="#features" class="footer-nav-link">Features</a>
-						<a href="#pricing" class="footer-nav-link">Pricing</a>
-						<a href="#contact" class="footer-nav-link">Contact</a>
-					</nav>
+					class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 lg:gap-0">
 					<div
-						class="flex gap-md justify-center w-full mt-lg pt-sm desktop:justify-self-end desktop:m-0 desktop:p-0">
+						class="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-16">
+						<a href="#" class="mx-auto lg:mx-0" aria-label="Bookmark home">
+							<img
+								src="images/logo-bookmark-footer.svg"
+								alt="Bookmark logo"
+								class="w-[148px] h-[25px]" />
+						</a>
+
+						<nav
+							class="flex flex-col lg:flex-row items-center gap-8 lg:gap-11"
+							aria-label="Footer navigation">
+							<a
+								href="#features"
+								class="text-white text-sm uppercase tracking-widest transition-colors duration-fast hover:text-soft-red focus:outline-2 focus:outline-soft-red focus:outline-offset-4">
+								Features
+							</a>
+
+							<a
+								href="#download"
+								class="text-white text-sm uppercase tracking-widest transition-colors duration-fast hover:text-soft-red focus:outline-2 focus:outline-soft-red focus:outline-offset-4">
+								Pricing
+							</a>
+
+							<a
+								href="#contact"
+								class="text-white text-sm uppercase tracking-widest transition-colors duration-fast hover:text-soft-red focus:outline-2 focus:outline-soft-red focus:outline-offset-4">
+								Contact
+							</a>
+						</nav>
+					</div>
+
+					<div
+						class="flex items-center justify-center gap-10"
+						aria-label="Social media links">
 						<a
 							href="#"
-							class="social-link"
-							aria-label="Visit our Facebook page">
+							aria-label="Visit our Facebook page"
+							class="transition-all duration-fast hover:brightness-0 hover:invert-[43%] hover:sepia-[96%] hover:saturate-[1600%] hover:hue-rotate-[330deg] focus:outline-2 focus:outline-soft-red focus:outline-offset-4">
 							<img
 								src="images/icon-facebook.svg"
 								alt=""
-								class="social-icon"
+								class="w-6 h-6"
 								aria-hidden="true" />
 						</a>
-						<a href="#" class="social-link" aria-label="Visit our Twitter page">
+
+						<a
+							href="#"
+							aria-label="Visit our Twitter page"
+							class="transition-all duration-fast hover:brightness-0 hover:invert-[43%] hover:sepia-[96%] hover:saturate-[1600%] hover:hue-rotate-[330deg] focus:outline-2 focus:outline-soft-red focus:outline-offset-4">
 							<img
 								src="images/icon-twitter.svg"
 								alt=""
-								class="social-icon"
+								class="w-6 h-6"
 								aria-hidden="true" />
 						</a>
 					</div>
 				</div>
 			</div>
 		</footer>
+		<script type="module" src="js/main.js"></script>
 	</body>
 </html>
