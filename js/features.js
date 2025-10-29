@@ -16,12 +16,18 @@ export function initFeatures() {
 		});
 
 		tabButtons.forEach(button => {
+			const indicator = button.querySelector('span');
+
 			if (button.dataset.tab === tabId) {
 				button.setAttribute('aria-selected', 'true');
-				button.classList.add('active-tab');
+				button.classList.add('text-very-dark-blue');
+				button.classList.remove('text-grayish-blue');
+				if (indicator) indicator.classList.remove('opacity-0');
 			} else {
 				button.setAttribute('aria-selected', 'false');
-				button.classList.remove('active-tab');
+				button.classList.remove('text-very-dark-blue');
+				button.classList.add('text-grayish-blue');
+				if (indicator) indicator.classList.add('opacity-0');
 			}
 		});
 	}
