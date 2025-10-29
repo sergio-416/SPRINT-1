@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-node_modules/
-
-dist/output.css
-
-.DS_Store
-Thumbs.db
-
-.vscode/
-.idea/
-
-*.log
-npm-debug.log*
-
-*.tmp
-*.temp
-||||||| 7af417f
-=======
 node_modules/
 style-backup.css
 index-backup.html
 style.css
->>>>>>> feature/tailwind-dev
