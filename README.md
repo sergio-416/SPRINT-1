@@ -1,50 +1,102 @@
 # Bookmark Manager Landing Page
 
-A responsive and accessible landing page for a bookmark management browser extension. Built with semantic HTML5, CSS3, and enhanced accessibility features following WCAG guidelines.
+A modern, responsive landing page for a bookmark management browser extension. Built with semantic HTML5 and styled with Tailwind CSS following utility-first principles.
 
-## Features
+## Overview
 
-- Fully responsive design for mobile, tablet, and desktop
-- CSS-only mobile navigation with hamburger menu
-- Interactive tab system without JavaScript
-- Native HTML5 accordion FAQ section
-- Form validation with ARIA live regions
-- WCAG AA compliant color contrast
-- Comprehensive ARIA attributes for screen readers
-- Keyboard navigation support
+This project showcases a complete browser extension landing page featuring:
 
-## Technologies
+- Responsive navigation with mobile menu
+- Interactive feature tabs
+- Browser extension download cards
+- FAQ accordion section
+- Newsletter subscription form with validation
+- Full mobile-first responsive design
 
-- HTML5 (Semantic markup)
-- CSS3 (Custom properties, Flexbox, Grid)
-- Montserrat font family
+## Technology Stack
 
-## Structure
+- **HTML5** - Semantic markup structure
+- **Tailwind CSS** - Utility-first styling framework
+- **JavaScript (ES6+)** - Modular component architecture
+
+## Project Evolution
+
+This project was originally built with vanilla CSS and later migrated to **Tailwind CSS** to achieve maximum utility-first purism. The migration involved:
+
+- Converting all custom CSS classes to Tailwind utilities
+- Replacing pseudo-elements with real DOM elements
+- Implementing utility-class manipulation via JavaScript
+- Minimizing custom CSS to only essential browser hacks and accessibility utilities
+
+The result is a highly maintainable, performant codebase that adheres to modern CSS architecture principles.
+
+## Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Build CSS
+npm run build:css
+
+# Watch CSS changes during development
+npm run watch:css
+```
+
+## Project Structure
 
 ```
-bookmark-manager/
-├── index.html          # Main HTML file with ARIA enhancements
-├── style.css           # Responsive styles with accessibility focus
-├── images/             # Project assets and illustrations
-└── README.md
+├── index.html           # Main HTML file
+├── style.css            # Compiled Tailwind output
+├── src/
+│   └── input.css        # Tailwind input file
+├── js/
+│   ├── main.js          # Entry point
+│   ├── navigation.js    # Mobile navigation
+│   ├── features.js      # Feature tabs
+│   ├── faq.js           # FAQ accordion
+│   └── newsletter.js    # Form validation
+├── images/              # Assets
+└── tailwind.config.js   # Tailwind configuration
 ```
 
-## Usage
+## Features Implementation
 
-Open `index.html` in any modern web browser. No build process or dependencies required.
+### Navigation
 
-## Accessibility Features
+- Responsive hamburger menu for mobile
+- Smooth transitions and animations
+- Logo switching based on menu state
 
-- Screen reader friendly with proper ARIA labels and roles
-- Keyboard navigation with visible focus states
-- Descriptive alt text for all meaningful images
-- Form error announcements for assistive technology
-- Semantic HTML structure
+### Feature Tabs
 
-## Author
+- JavaScript-powered tab switching
+- Utility-class state management
+- Accessible ARIA attributes
 
-Sergio Morey - @sergio-416
+### FAQ Section
+
+- Native HTML5 `<details>` elements
+- CSS-only accordion functionality
+- Smooth transitions with Tailwind utilities
+
+### Newsletter Form
+
+- Real-time email validation
+- Accessible error messaging
+- Custom styled form inputs
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Design Attribution
+
+Design provided by Frontend Mentor. Implementation and Tailwind migration by Sergio Morey.
 
 ## License
 
-This project is for educational and portfolio purposes.
+ISC
